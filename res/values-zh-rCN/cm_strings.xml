@@ -20,4 +20,7 @@
     <string name="show_emoticons_pref_title">访问表情符号</string>
     <string name="show_emoticons_pref_summary">在键盘上显示表情符号键</string>
     <string name="notification_channel_messages_title">短信</string>
+
+    <!-- Mark message as read -->
+    <string name="notification_mark_as_read">标记为已读</string>
 </resources>
