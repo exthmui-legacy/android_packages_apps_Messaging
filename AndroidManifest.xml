@@ -509,6 +509,8 @@
                        android:resource="@xml/widget_conversation" />
         </receiver>
 
+        <receiver android:name=".receiver.CaptchaCodeReceiver" android:exported="false" />
+
         <service android:name=".widget.WidgetConversationListService"
                  android:permission="android.permission.BIND_REMOTEVIEWS"
                  android:exported="false" />
