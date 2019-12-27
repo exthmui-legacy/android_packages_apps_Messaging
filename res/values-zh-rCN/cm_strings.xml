@@ -29,4 +29,7 @@
     <string name="mediapicker_audio_list_title_selection">已选择 <xliff:g id="count">%d</xliff:g> 项。</string>
     <string name="notification_mark_as_read">标记为已读</string>
     <string name="notification_channel_messages_title">短信</string>
+
+    <string name="captcha_copy">复制 %s</string>
+    <string name="captcha_has_copied">验证码已经复制到剪贴板，长按输入框进行粘贴。</string>
 </resources>

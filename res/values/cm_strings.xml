@@ -37,4 +37,8 @@
 
     <!-- Notification channel -->
     <string name="notification_channel_messages_title">Messages</string>
+
+    <!-- Captcha -->
+    <string name="captcha_copy">Copy %s</string>
+    <string name="captcha_has_copied">Verification code already copied to the clipboard, long press your input box to paste.</string>
 </resources>
