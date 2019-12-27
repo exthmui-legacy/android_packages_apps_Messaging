@@ -62,6 +62,7 @@ import com.android.messaging.datamodel.media.MediaResourceManager;
 import com.android.messaging.datamodel.media.MessagePartVideoThumbnailRequestDescriptor;
 import com.android.messaging.datamodel.media.UriImageRequestDescriptor;
 import com.android.messaging.datamodel.media.VideoThumbnailRequest;
+import com.android.messaging.receiver.CaptchaCodeReceiver;
 import com.android.messaging.sms.MmsSmsUtils;
 import com.android.messaging.sms.MmsUtils;
 import com.android.messaging.ui.UIIntents;
@@ -71,6 +72,7 @@ import com.android.messaging.util.BugleGservices;
 import com.android.messaging.util.BugleGservicesKeys;
 import com.android.messaging.util.BuglePrefs;
 import com.android.messaging.util.BuglePrefsKeys;
+import com.android.messaging.util.CaptchaUtil;
 import com.android.messaging.util.ContentType;
 import com.android.messaging.util.ConversationIdSet;
 import com.android.messaging.util.ImageUtils;
@@ -788,8 +790,21 @@ public class BugleNotifications {
 
             maybeAddWearableConversationLog(wearableExtender,
                     (MultiMessageNotificationState) notificationState);
+
+            final MultiMessageNotificationState multiMessageNotificationState =
+                (MultiMessageNotificationState) notificationState;
+            final ConversationLineInfo convInfo = multiMessageNotificationState.mConvList.mConvInfos.get(0);
+            String content = multiMessageNotificationState.mContent.toString();
+            String captcha = CaptchaUtil.getCaptcha(content);
+
             addDownloadMmsAction(notifBuilder, wearableExtender, notificationState);
-            addReplyAction(notifBuilder, wearableExtender, notificationState);
+
+            if (!TextUtils.isEmpty(captcha)) {
+                addCopyCaptchaAction(notifBuilder, wearableExtender, notificationState, captcha);
+            } else {
+                addReplyAction(notifBuilder, wearableExtender, notificationState);
+            }
+
             addReadAction(notifBuilder, wearableExtender, notificationState);
         }
 
@@ -882,6 +897,24 @@ public class BugleNotifications {
         final NotificationCompat.Action.Builder readActionBuilder =
                 new NotificationCompat.Action.Builder(R.drawable.ic_wear_read,
                         context.getString(R.string.notification_mark_as_read), readPendingIntent);
+        notifBuilder.addAction(readActionBuilder.build());
+
+        // Support the action on a wearable device as well
+        wearableExtender.addAction(readActionBuilder.build());
+    }
+
+    private static void addCopyCaptchaAction(final NotificationCompat.Builder notifBuilder,
+              final WearableExtender wearableExtender, final NotificationState notificationState, final String captcha) {
+        final Context context = Factory.get().getApplicationContext();
+
+        final Intent pendingIntent = new Intent();
+        pendingIntent.setClass(context, CaptchaCodeReceiver.class);
+        pendingIntent.putExtra("chapataCode", captcha);
+        pendingIntent.putExtra("conversationId", notificationState.mConversationIds.first());
+        PendingIntent captchaIntent = PendingIntent.getBroadcast(context, 0, pendingIntent,PendingIntent.FLAG_UPDATE_CURRENT);
+
+        final NotificationCompat.Action.Builder readActionBuilder =
+                new NotificationCompat.Action.Builder(0, String.format(context.getString(R.string.captcha_copy), captcha), captchaIntent);
         notifBuilder.addAction(readActionBuilder.build());
 
         // Support the action on a wearable device as well
@@ -1214,4 +1247,5 @@ public class BugleNotifications {
                 PendingIntentConstants.MSG_SEND_ERROR,
                 builder.build());
     }
+
 }
