@@ -919,7 +919,7 @@ public class BugleNotifications {
         PendingIntent captchaIntent = PendingIntent.getBroadcast(context, 0, pendingIntent,PendingIntent.FLAG_UPDATE_CURRENT);
 
         final NotificationCompat.Action.Builder readActionBuilder =
-                new NotificationCompat.Action.Builder(0, String.format(context.getString(R.string.captcha_copy), captcha), captchaIntent);
+                new NotificationCompat.Action.Builder(0, String.format(context.getString(R.string.captcha_copy_action), captcha), captchaIntent);
         notifBuilder.addAction(readActionBuilder.build());
 
         // Support the action on a wearable device as well
