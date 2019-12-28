@@ -18,6 +18,6 @@
     <string name="show_quick_reply_templates_title">Quick reply templates</string>
     <string name="show_quick_reply_templates_summary">Show quick reply templates in notification.</string>
     <!-- Captcha -->
-    <string name="captcha_copy">Copy %s</string>
-    <string name="captcha_has_copied">Verification code already copied to the clipboard, long press your input box to paste.</string>
+    <string name="captcha_copy_action">Copy %s</string>
+    <string name="captcha_has_copied_toast">Verification code already copied to the clipboard, long press your input box to paste.</string>
 </resources>
