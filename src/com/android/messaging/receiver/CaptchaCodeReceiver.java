@@ -43,7 +43,7 @@ public class CaptchaCodeReceiver extends BroadcastReceiver {
         if (!TextUtils.isEmpty(chapataCode)) {
             ClipboardManager clipboardManager = (ClipboardManager)context.getSystemService(Context.CLIPBOARD_SERVICE);
             clipboardManager.setText(chapataCode);
-            Toast.makeText(context, context.getString(R.string.captcha_has_copied), Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, context.getString(R.string.captcha_has_copied_toast), Toast.LENGTH_SHORT).show();
 
             /* Mark as read */
             String conversationId = extras.getString("conversationId");

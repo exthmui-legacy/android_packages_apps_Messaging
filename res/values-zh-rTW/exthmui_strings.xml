@@ -15,9 +15,8 @@
     limitations under the License.
 -->
 <resources>
-    <string name="show_quick_reply_templates_title">Quick reply templates</string>
-    <string name="show_quick_reply_templates_summary">Show quick reply templates in notification.</string>
-    <!-- Captcha -->
-    <string name="captcha_copy_action">Copy %s</string>
-    <string name="captcha_has_copied_toast">Verification code already copied to the clipboard, long press your input box to paste.</string>
+    <string name="show_quick_reply_templates_title">快速回復模板</string>
+    <string name="show_quick_reply_templates_summary">在簡訊通知中顯示快速回復模板</string>
+    <string name="captcha_copy_action">複製 %s</string>
+    <string name="captcha_has_copied_toast">驗證碼已經複製到剪貼板，長按輸入框進行粘貼。</string>
 </resources>
