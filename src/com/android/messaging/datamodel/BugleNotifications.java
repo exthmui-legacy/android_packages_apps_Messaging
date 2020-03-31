@@ -877,6 +877,10 @@ public class BugleNotifications {
         final NotificationCompat.Action.Builder actionBuilder =
                 new NotificationCompat.Action.Builder(R.drawable.ic_wear_reply,
                         context.getString(replyLabelRes), replyPendingIntent);
+
+        notifBuilder.addAction(actionBuilder.build());
+
+        // Support the action on a wearable device as well
         final String[] choices = context.getResources().getStringArray(
                 R.array.notification_reply_choices);
 
@@ -889,9 +893,6 @@ public class BugleNotifications {
         final RemoteInput remoteInput = remoteInputBuilder.build();
 
         actionBuilder.addRemoteInput(remoteInput);
-        notifBuilder.addAction(actionBuilder.build());
-
-        // Support the action on a wearable device as well
         wearableExtender.addAction(actionBuilder.build());
     }
 
