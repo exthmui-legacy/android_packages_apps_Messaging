@@ -18,8 +18,6 @@
     package="com.android.messaging"
     android:installLocation="internalOnly">
 
-    <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="28" />
-
     <!-- Application holds CPU wakelock while working in background -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <!-- Application needs SMS/MMS permissions -->
@@ -154,10 +152,9 @@
             android:name=".ui.photoviewer.BuglePhotoViewActivity"
             android:label="@string/photo_view_activity_title"
             android:configChanges="orientation|screenSize|keyboardHidden"
-            android:screenOrientation="user"
-            android:theme="@style/BuglePhotoViewTheme"
-        />
-
+            android:screenOrientation="user" />
+            <!--android:theme="@style/BuglePhotoViewTheme"-->
+        
         <!-- Settings -->
         <activity
             android:name=".ui.appsettings.SettingsActivity"

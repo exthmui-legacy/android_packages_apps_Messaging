@@ -17,17 +17,16 @@ package com.android.messaging.util;
 
 import android.content.Context;
 import android.content.res.Resources;
-import androidx.core.view.accessibility.AccessibilityEventCompat;
-import androidx.core.view.accessibility.AccessibilityRecordCompat;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityManager;
-
+import androidx.core.view.accessibility.AccessibilityEventCompat;
+import androidx.core.view.accessibility.AccessibilityRecordCompat;
 import com.android.messaging.Factory;
 import com.android.messaging.R;
 
-import javax.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 public class AccessibilityUtil {
     public static String sContentDescriptionDivider;

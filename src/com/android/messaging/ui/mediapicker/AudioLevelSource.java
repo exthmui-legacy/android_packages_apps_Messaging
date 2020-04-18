@@ -17,14 +17,16 @@ package com.android.messaging.ui.mediapicker;
 
 import com.google.common.base.Preconditions;
 
-import javax.annotation.concurrent.ThreadSafe;
+//import androidx.annotation.concurrent.ThreadSafe;
 
 /**
  * Keeps track of the speech level as last observed by the recognition
  * engine as microphone data flows through it. Can be polled by the UI to
  * animate its views.
  */
-@ThreadSafe
+
+// TODO:Check ThreadSafe annotation
+//@ThreadSafe
 public class AudioLevelSource {
     private volatile int mSpeechLevel;
     private volatile Listener mListener;
