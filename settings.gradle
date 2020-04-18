@@ -1,0 +1,1 @@
+include ':system_res:colorpicker',':system_res:libchips',':system_res:libphotoviewer'

@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2015 The Android Open Source Project
+ *           (C) 2020 The exTHmUI Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,14 +18,16 @@ package com.android.messaging.ui.mediapicker;
 
 import com.google.common.base.Preconditions;
 
-import javax.annotation.concurrent.ThreadSafe;
+//import javax.annotation.concurrent.ThreadSafe;
 
 /**
  * Keeps track of the speech level as last observed by the recognition
  * engine as microphone data flows through it. Can be polled by the UI to
  * animate its views.
  */
-@ThreadSafe
+
+// TODO:Check ThreadSafe annotation
+//@ThreadSafe
 public class AudioLevelSource {
     private volatile int mSpeechLevel;
     private volatile Listener mListener;

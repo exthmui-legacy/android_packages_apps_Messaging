@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
     Copyright (C) 2015 The Android Open Source Project
+              (C) 2020 The exTHmUI Project
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -17,8 +18,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.android.messaging"
     android:installLocation="internalOnly">
-
-    <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="28" />
 
     <!-- Application holds CPU wakelock while working in background -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -155,9 +154,8 @@
             android:label="@string/photo_view_activity_title"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="user"
-            android:theme="@style/BuglePhotoViewTheme"
-        />
-
+            android:theme="@style/BuglePhotoViewTheme" />
+        
         <!-- Settings -->
         <activity
             android:name=".ui.appsettings.SettingsActivity"

@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2015 The Android Open Source Project
+ *           (C) 2020 The exTHmUI Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,7 +30,7 @@ import com.android.messaging.util.AccessibilityUtil;
 import com.android.messaging.util.PhoneUtils;
 import com.android.messaging.util.ThreadUtil;
 
-import javax.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 /**
  * Shows one-time, transient notifications in response to action failures (i.e. permanent failures
