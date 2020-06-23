@@ -123,7 +123,7 @@ public class CaptchaUtil {
             }
         }
 
-        if (left != -1 && right - left >= 3) {
+        if (right < content.length() && right - left >= 3) {
             return content.substring(left, right + 1);
         } else {
             return "";
