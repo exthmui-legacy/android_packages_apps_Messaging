@@ -18,6 +18,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.android.messaging"
     android:installLocation="internalOnly">
+    <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="29"/>
 
     <!-- Application holds CPU wakelock while working in background -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
