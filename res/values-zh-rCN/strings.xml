@@ -391,7 +391,6 @@
     <string name="conversation_list_item_view_sent_from_you_prefix" msgid="1735457801737604211">"你： "</string>
     <string name="conversation_list_item_view_sent_from_other_prefix" msgid="9202622757034736175">"<xliff:g id="FIRSTNAMEOFSENDER">%s</xliff:g>： "</string>
     <string name="conversation_list_item_view_draft_message" msgid="3592923997082845035">"草稿"</string>
-    <string name="conversation_list_empty_text" msgid="7505706551294769667">"您的短信对话将列在此处"</string>
     <string name="archived_conversation_list_empty_text" msgid="6109126963298874571">"已归档的对话会显示在此处"</string>
     <string name="conversation_list_first_sync_text" msgid="3749751291444609993">"正在加载对话…"</string>
     <string name="conversation_list_snippet_picture" msgid="5326960910088541826">"照片"</string>
@@ -516,4 +515,5 @@
     <string name="conversation_creation_failure" msgid="8597624563218724441">"无法发起对话"</string>
     <string name="link_display_format" msgid="8700344957248709584">"<xliff:g id="TEXT">%1$s</xliff:g> (<xliff:g id="URL">%2$s</xliff:g>)"</string>
     <string name="selected_sim_content_message" msgid="4504796674843354505">"已选择<xliff:g id="SELECTED_SIM">%s</xliff:g>"</string>
+    <string name="conversation_list_empty_text">你看起来好像很孤独的样子\n一条短信也没有</string>
 </resources>

@@ -17,19 +17,26 @@
 package com.android.messaging.ui;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.Color;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.provider.Settings;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.android.messaging.Factory;
 import com.android.messaging.R;
 import com.android.messaging.util.OsUtil;
 import com.android.messaging.util.UiUtils;
+
+import java.lang.reflect.Method;
 
 /**
  * Activity to check if the user has required permissions. If not, it will try to prompt the user
@@ -52,7 +59,6 @@ public class PermissionCheckActivity extends Activity {
         }
 
         setContentView(R.layout.permission_check_activity);
-        UiUtils.setStatusBarColor(this, getColor(R.color.permission_check_activity_background));
 
         findViewById(R.id.exit).setOnClickListener(new OnClickListener() {
             @Override
@@ -129,7 +135,6 @@ public class PermissionCheckActivity extends Activity {
         if (!OsUtil.hasRequiredPermissions()) {
             return false;
         }
-
         redirect();
         return true;
     }
@@ -138,4 +143,14 @@ public class PermissionCheckActivity extends Activity {
         UIIntents.get().launchConversationListActivity(this);
         finish();
     }
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        //getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY |
+        //        View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN);
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+    }
+
+
 }

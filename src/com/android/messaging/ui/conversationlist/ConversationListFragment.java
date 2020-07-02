@@ -174,7 +174,7 @@ public class ConversationListFragment extends Fragment implements ConversationLi
                 container, false);
         mRecyclerView = (RecyclerView) rootView.findViewById(android.R.id.list);
         mEmptyListMessageView = (ListEmptyView) rootView.findViewById(R.id.no_conversations_view);
-        mEmptyListMessageView.setImageHint(R.drawable.ic_oobe_conv_list);
+        mEmptyListMessageView.setImageHint(R.drawable.ic_mms_oobe_conv_list);
         // The default behavior for default layout param generation by LinearLayoutManager is to
         // provide width and height of WRAP_CONTENT, but this is not desirable for
         // ConversationListFragment; the view in each row should be a width of MATCH_PARENT so that
