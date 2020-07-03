@@ -67,24 +67,7 @@ import com.android.messaging.receiver.CaptchaCodeReceiver;
 import com.android.messaging.sms.MmsSmsUtils;
 import com.android.messaging.sms.MmsUtils;
 import com.android.messaging.ui.UIIntents;
-import com.android.messaging.util.Assert;
-import com.android.messaging.util.AvatarUriUtil;
-import com.android.messaging.util.BugleGservices;
-import com.android.messaging.util.BugleGservicesKeys;
-import com.android.messaging.util.BuglePrefs;
-import com.android.messaging.util.BuglePrefsKeys;
-import com.android.messaging.util.CaptchaUtil;
-import com.android.messaging.util.ContentType;
-import com.android.messaging.util.ConversationIdSet;
-import com.android.messaging.util.ImageUtils;
-import com.android.messaging.util.LogUtil;
-import com.android.messaging.util.NotificationPlayer;
-import com.android.messaging.util.NotificationsUtil;
-import com.android.messaging.util.OsUtil;
-import com.android.messaging.util.PendingIntentConstants;
-import com.android.messaging.util.PhoneUtils;
-import com.android.messaging.util.ThreadUtil;
-import com.android.messaging.util.UriUtil;
+import com.android.messaging.util.*;
 
 import java.util.HashSet;
 import java.util.Iterator;
@@ -793,9 +776,9 @@ public class BugleNotifications {
 
             final MultiMessageNotificationState multiMessageNotificationState =
                 (MultiMessageNotificationState) notificationState;
-            final ConversationLineInfo convInfo = multiMessageNotificationState.mConvList.mConvInfos.get(0);
-            String content = multiMessageNotificationState.mContent.toString();
-            String captcha = CaptchaUtil.getCaptcha(content);
+            // final ConversationLineInfo convInfo = multiMessageNotificationState.mConvList.mConvInfos.get(0);
+            // String content = multiMessageNotificationState.mContent.toString();
+            String captcha = VerificationCodeUtil.getVerificationCode(multiMessageNotificationState.mContent.toString()); // CaptchaUtil.getCaptcha(content);
 
             addDownloadMmsAction(notifBuilder, wearableExtender, notificationState);
 
