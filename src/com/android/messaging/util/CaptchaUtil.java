@@ -19,6 +19,11 @@ package com.android.messaging.util;
 import android.text.TextUtils;
 import java.util.ArrayList;
 
+/**
+ * @hide
+ * This class is replaced by {@link VerificationCodeUtil}
+ **/
+@Deprecated
 public class CaptchaUtil {
 
     public static String getCaptcha(String sms) {
