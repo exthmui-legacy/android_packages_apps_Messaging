@@ -1,16 +1,19 @@
 repositories {
     google()
     jcenter()
+    maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
 }
 
 buildscript {
     repositories {
         google()
         jcenter()
+        maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath 'com.android.tools.build:gradle:3.6.3'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.4-M2"
     }
 }
 
@@ -72,18 +75,19 @@ android {
 dependencies {
     compileOnly fileTree(dir: 'system_libs/', include: ['*.jar'])
 
-    implementation "androidx.core:core:1.2.0"
+    implementation "androidx.core:core:1.3.0"
     implementation "androidx.media:media:1.1.0"
     implementation "androidx.legacy:legacy-support-core-utils:1.0.0"
     implementation "androidx.legacy:legacy-support-core-ui:1.0.0"
-    implementation "androidx.fragment:fragment:1.2.4"
+    implementation "androidx.fragment:fragment:1.2.5"
     implementation "androidx.appcompat:appcompat:1.1.0"
     implementation "androidx.palette:palette:1.0.0"
     implementation "androidx.recyclerview:recyclerview:1.1.0"
     implementation "androidx.legacy:legacy-support-v13:1.0.0"
     implementation "androidx.annotation:annotation:1.1.0"
-    implementation "com.google.guava:guava:18.0"
+    implementation "com.google.guava:guava:24.1-jre"
     implementation "com.googlecode.libphonenumber:libphonenumber:8.8.10"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.4-M2"
     implementation project(path: ':system_res:colorpicker')
     implementation project(path: ':system_res:libchips')
     implementation project(path: ':system_res:libphotoviewer')
