@@ -516,4 +516,5 @@
     <string name="link_display_format" msgid="8700344957248709584">"<xliff:g id="TEXT">%1$s</xliff:g> (<xliff:g id="URL">%2$s</xliff:g>)"</string>
     <string name="selected_sim_content_message" msgid="4504796674843354505">"已选择<xliff:g id="SELECTED_SIM">%s</xliff:g>"</string>
     <string name="conversation_list_empty_text">你看起来好像很孤独的样子\n一条短信也没有</string>
+    <string name="contact_picker_hint_text">点击打开本机联系人列表</string>
 </resources>

@@ -150,7 +150,7 @@
         <item name="android:scrollHorizontally">false</item>
         <item name="android:textCursorDrawable">@null</item>
         <item name="android:inputType">textAutoCorrect|textCapSentences|textMultiLine</item>
-        <item name="android:colorAccent">@color/lineage_accent</item>
+        <item name="android:colorAccent">@color/primary_color</item>
     </style>
 
     <style name="ConversationComposeSubjectText" parent="ConversationComposeSendText">
@@ -268,7 +268,7 @@
     <style name="ComposeMessageViewAttachMediaButtonStyle">
         <item name="android:paddingLeft">@dimen/compose_message_attachment_padding_sides</item>
         <item name="android:paddingRight">@dimen/compose_message_attachment_padding_sides</item>
-        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:background">?android:attr/selectableItemBackgroundBorderless</item>
     </style>
 
     <style name="ContactListItemViewStyle">
