@@ -17,19 +17,32 @@
 package com.android.messaging.util;
 
 import android.text.TextUtils;
-import java.util.ArrayList;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class CaptchaUtil {
+
+    private static String[] specialRegex = {
+            "【CMK】([0-9]{5})"       // Telegram
+    };
 
     public static String getCaptcha(String sms) {
         if (sms.length() == 0) {
             return null;
         }
 
-        sms = sms.replaceAll("[a-zA-z]+://[^\\s]*",""); // remove URL
-        sms = sms.replaceAll("(\\[.{0,}\\]|【.{0,}】)",""); // remove Sender
+        for (String regex : specialRegex) {
+            Pattern p = Pattern.compile(regex);
+            Matcher matcher = p.matcher(sms);
+            if (matcher.find()) {
+                return matcher.group(1);
+            }
+        }
 
-        ArrayList<String> sentenceList = cutSentence(sms);
+        String[] sentenceList = sms.replaceAll("[a-zA-z]+://[^\\s]*","") // remove URL
+                .replaceAll("(\\[.{0,}\\]|【.{0,}】)","")                // remove sender
+                .split("[.。;；!！]");
 
         int keyPos = 0;
         String code = "";
@@ -47,34 +60,13 @@ public class CaptchaUtil {
         return code;
     }
 
-    /* 切割句子 */
-    private static ArrayList<String> cutSentence(String content) {
-
-        ArrayList<String> sentenceList = new ArrayList<>();
-        int left = 0;
-        int len = content.length();
-
-        for (int right = 0; right < len; right++) {
-            char c = content.charAt(right);
-            if (c == ',' || c == '，' ||
-                c == '.' || c == '。' ||
-                c == '!' || c == '！') {
-                sentenceList.add(content.substring(left, right));
-                left = right + 1;
-            }
-        }
-        if (left < len) {
-            sentenceList.add(content.substring(left, len));
-        }
-        return sentenceList;
-    }
-
     /* 查找关键字 */
     private static int findKeyWord(String content) {
-        String[] keyWords = new String[]{"验证码", "校验码", "認証コード", "码", "碼", " code"};
-        int resPos = -1, len = keyWords.length;
+        String[] keyWords = new String[]{"码", "碼", "コード", " code"};
+        int resPos = -1;
+        content = content.toLowerCase();
 
-        for (int i = 0; i < len; i++) {
+        for (int i = 0; i < keyWords.length; i++) {
             resPos = content.indexOf(keyWords[i]);
             if (resPos != -1) {
                 break;
@@ -90,43 +82,41 @@ public class CaptchaUtil {
 
     private static String cutCaptchaCode(String content, int startPos) {
         int len = content.length();
-        int left = -1, right = len;
+        StringBuilder sb = new StringBuilder();
+
         // 向右查找
         for (int i = startPos; i < len; i++) {
             if (isCaptchaChar(content.charAt(i))) {
-                if (left == -1) {
-                    left = i;
-                } else {
-                    right = i;
-                }
+                sb.append(content.charAt(i));
             } else {
-                if (left != -1) {
+                if (sb.length() > 3) {
                     break;
+                } else {
+                    sb.delete(0, sb.length());
                 }
             }
         }
-        if (left == -1 || right - left < 3) {
+        if (sb.length() > 3) {
+            return sb.toString();
+        } else {
             // 右边找不到就向左查找
-            left = 0; right = -1;
+            sb.delete(0, sb.length());
             for (int i = startPos; i >= 0; i--) {
                 if (isCaptchaChar(content.charAt(i))) {
-                    if (right == -1) {
-                        right = i;
-                    } else {
-                        left = i;
-                    }
+                    sb.append(content.charAt(i));
                 } else {
-                    if (right != -1) {
+                    if (sb.length() > 3) {
                         break;
+                    } else {
+                        sb.delete(0, sb.length());
                     }
                 }
             }
         }
-
-        if (right < content.length() && right - left >= 3) {
-            return content.substring(left, right + 1);
+        if (sb.length() > 3) {
+           return sb.reverse().toString();
         } else {
-            return "";
+            return null;
         }
     }
 }

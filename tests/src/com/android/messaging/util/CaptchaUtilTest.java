@@ -40,7 +40,7 @@ public class CaptchaUtilTest extends BugleTestCase {
                 "370000");
         assertEquals(CaptchaUtil.getCaptcha("G-282391 是您的 Google 验证码"),
                 "282391");
-
+        assertEquals(CaptchaUtil.getCaptcha("5266，验证码5分钟内有效"), "5266");
         assertNull(CaptchaUtil.getCaptcha("这是一条普通短信～"));
         assertNull(CaptchaUtil.getCaptcha("这不是验证码短信～"));
     }
