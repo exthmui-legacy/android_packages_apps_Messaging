@@ -45,6 +45,10 @@
         <item name="android:fitsSystemWindows">true</item>
     </style>
 
+    <style name="LaunchTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
+         <item name="colorPrimary">@color/action_bar_background_color</item>
+    </style>
+
     <style name="BugleTheme.ConversationActivity"
         parent="@style/BugleTheme.ConversationActivityBase">
     </style>
