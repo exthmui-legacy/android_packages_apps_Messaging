@@ -35,12 +35,12 @@
     <color name="conversation_list_name">#DE000000</color>
     <color name="conversation_list_details">#8A000000</color>
 
-    <color name="conversation_compose_divider_start">#44000000</color>
+    <color name="conversation_compose_divider_start">#10000000</color>
 
     <color name="message_text">#000000</color>
-    <color name="timestamp_text_outgoing">#99323232</color>
-    <color name="timestamp_text_incoming">#99ffffff</color>
-    <color name="timestamp_text_failed">#99ff0000</color>
+    <color name="timestamp_text_outgoing">#99363636</color>
+    <color name="timestamp_text_incoming">#99363636</color>
+    <color name="timestamp_text_failed">#ccff3131</color>
     <color name="compose_send_text_color">#000000</color>
 
     <color name="message_title_text">#ff323232</color>
@@ -59,18 +59,18 @@
     <color name="background_item_pressed">#6733b5e5</color>
 
     <color name="subject_editor_bubble">#ffffffff</color>
-    <color name="message_text_color_incoming">#ffffffff</color>
+    <color name="message_text_color_incoming">#ff363636</color>
     <color name="message_text_color_incoming_download_failed">#6a6a6a</color>
-    <color name="message_text_color_outgoing">#ff323232</color>
-    <color name="conversation_background">#eeeeee</color>
+    <color name="message_text_color_outgoing">#ff363636</color>
+    <color name="conversation_background">#ffffffff</color>
     <color name="conversation_edge_effect">#9d9d9d</color>
     <color name="compose_message_send_color">@color/lineage_accent</color>
     <color name="compose_message_send_color_pressed">#999999</color>
-    <color name="message_bubble_color_outgoing">#ffffffff</color>
+    <color name="message_bubble_color_outgoing">#fff6f6f6</color>
     <color name="message_error_bubble_color_incoming">#e2e2e2</color>
     <color name="message_audio_button_color_incoming">#ffffffff</color>
-    <color name="message_bubble_color_selected">@color/lineage_accent</color>
-    <color name="message_image_selected_tint">#80FF9800</color>
+    <color name="message_bubble_color_selected">@color/primary_color</color>
+    <color name="message_image_selected_tint">#802196f3</color>
     <color name="generic_video_icon">#ff808080</color>
 
     <!-- Base color used for color filtering. -->
@@ -93,7 +93,7 @@
     <color name="contact_picker_background">#ffffff</color>
     <color name="chips_dropdown_background_activated">#4285f4</color>
     <color name="chips_dropdown_background_pressed">#ededed</color>
-    <color name="chips_background_color">#33000000</color>
+    <color name="chips_background_color">#1A000000</color>
     <color name="chips_text_color">@android:color/white</color>
 
     <color name="camera_button_container_background">#80000000</color>
@@ -163,7 +163,7 @@
     <color name="sim_indicator_color_light">#ffffff</color>
     <color name="sim_indicator_color_dark">#323232</color>
 
-    <color name="text_highlight_color">#80689F38</color>
+    <color name="text_highlight_color">#7c2196f3</color>
     <color name="search_view_text_cursor">#b0dddddd</color>
 
     <color name="button_bar_action_button_text_color">#03a9f4</color>
@@ -180,7 +180,7 @@
     <color name="widget_incoming_text_color">@android:color/white</color>
     <color name="widget_outgoing_text_color">#424242</color>
     <color name="widget_background_color">#ffffff</color>
-    <color name="ripple_material_light">#40000000</color>
+    <color name="ripple_material_light">#3d000000</color>
     <color name="widget_conversation_title_color">#FFFFFF</color>
 
     <color name="attachment_chooser_audio_background">#eeeeee</color>

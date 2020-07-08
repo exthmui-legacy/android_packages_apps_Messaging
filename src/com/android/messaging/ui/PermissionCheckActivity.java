@@ -25,7 +25,6 @@ import android.provider.Settings;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
-
 import com.android.messaging.Factory;
 import com.android.messaging.R;
 import com.android.messaging.util.OsUtil;
@@ -59,22 +58,14 @@ public class PermissionCheckActivity extends Activity {
             }
         });
 
-        mNextView = (TextView) findViewById(R.id.next);
-        mNextView.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(final View view) {
-                tryRequestPermission();
-            }
-        });
+        mNextView = findViewById(R.id.next);
+        mNextView.setOnClickListener(view -> tryRequestPermission());
 
-        mSettingsView = (TextView) findViewById(R.id.settings);
-        mSettingsView.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(final View view) {
-                final Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
-                        Uri.parse(PACKAGE_URI_PREFIX + getPackageName()));
-                startActivity(intent);
-            }
+        mSettingsView = findViewById(R.id.settings);
+        mSettingsView.setOnClickListener(view -> {
+            final Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
+                    Uri.parse(PACKAGE_URI_PREFIX + getPackageName()));
+            startActivity(intent);
         });
     }
 
@@ -100,7 +91,7 @@ public class PermissionCheckActivity extends Activity {
 
     @Override
     public void onRequestPermissionsResult(
-            final int requestCode, final String permissions[], final int[] grantResults) {
+            final int requestCode, final String[] permissions, final int[] grantResults) {
         if (requestCode == REQUIRED_PERMISSIONS_REQUEST_CODE) {
             // We do not use grantResults as some of the granted permissions might have been
             // revoked while the permissions dialog box was being shown for the missing permissions.

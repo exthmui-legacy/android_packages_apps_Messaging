@@ -21,13 +21,8 @@ import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
-import android.graphics.Color;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
 import android.text.Html;
 import android.text.Spanned;
 import android.text.TextPaint;
@@ -43,12 +38,14 @@ import android.view.animation.Interpolator;
 import android.view.animation.ScaleAnimation;
 import android.widget.RemoteViews;
 import android.widget.Toast;
-
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 import com.android.messaging.Factory;
 import com.android.messaging.R;
 import com.android.messaging.ui.SnackBar;
 import com.android.messaging.ui.SnackBar.Placement;
-import com.android.messaging.ui.conversationlist.ConversationListActivity;
 import com.android.messaging.ui.SnackBarInteraction;
 import com.android.messaging.ui.SnackBarManager;
 import com.android.messaging.ui.UIIntents;
@@ -260,18 +257,19 @@ public class UiUtils {
                 location[0] + view.getMeasuredWidth(), location[1] + view.getMeasuredHeight());
     }
 
-    public static void setStatusBarColor(final Activity activity, final int color) {
-        if (OsUtil.isAtLeastL()) {
-            // To achieve the appearance of an 80% opacity blend against a black background,
-            // each color channel is reduced in value by 20%.
-            final int blendedRed = (int) Math.floor(0.8 * Color.red(color));
-            final int blendedGreen = (int) Math.floor(0.8 * Color.green(color));
-            final int blendedBlue = (int) Math.floor(0.8 * Color.blue(color));
-
-            activity.getWindow().setStatusBarColor(
-                    Color.rgb(blendedRed, blendedGreen, blendedBlue));
-        }
-    }
+//    TODO: change for fully translucent status bar
+//    public static void setStatusBarColor(final Activity activity, final int color) {
+//        if (OsUtil.isAtLeastL()) {
+//            // To achieve the appearance of an 100% opacity blend against a black background,
+//            // each color channel is reduced in value by 0%.
+//            final int blendedRed = (int) Math.floor(Color.red(color));
+//            final int blendedGreen = (int) Math.floor(Color.green(color));
+//            final int blendedBlue = (int) Math.floor(Color.blue(color));
+//
+//            activity.getWindow().setStatusBarColor(
+//                    Color.rgb(blendedRed, blendedGreen, blendedBlue));
+//        }
+//    }
 
     public static void lockOrientation(final Activity activity) {
         final int orientation = activity.getResources().getConfiguration().orientation;

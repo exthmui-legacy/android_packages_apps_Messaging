@@ -21,7 +21,6 @@ import android.database.Cursor;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
-import androidx.annotation.Nullable;
 import android.text.Spanned;
 import android.text.TextUtils;
 import android.text.format.DateUtils;
@@ -30,17 +29,12 @@ import android.text.style.URLSpan;
 import android.text.util.Linkify;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
-import android.view.Gravity;
-import android.view.LayoutInflater;
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.WindowManager;
-import android.widget.FrameLayout;
+import android.view.*;
 import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
-
+import androidx.annotation.Nullable;
 import com.android.messaging.R;
 import com.android.messaging.datamodel.DataModel;
 import com.android.messaging.datamodel.data.ConversationMessageData;
@@ -51,25 +45,10 @@ import com.android.messaging.datamodel.media.ImageRequestDescriptor;
 import com.android.messaging.datamodel.media.MessagePartImageRequestDescriptor;
 import com.android.messaging.datamodel.media.UriImageRequestDescriptor;
 import com.android.messaging.sms.MmsUtils;
-import com.android.messaging.ui.AsyncImageView;
+import com.android.messaging.ui.*;
 import com.android.messaging.ui.AsyncImageView.AsyncImageViewDelayLoader;
-import com.android.messaging.ui.AudioAttachmentView;
-import com.android.messaging.ui.ContactIconView;
-import com.android.messaging.ui.ConversationDrawables;
-import com.android.messaging.ui.MultiAttachmentLayout;
 import com.android.messaging.ui.MultiAttachmentLayout.OnAttachmentClickListener;
-import com.android.messaging.ui.PersonItemView;
-import com.android.messaging.ui.UIIntents;
-import com.android.messaging.ui.VideoThumbnailView;
-import com.android.messaging.util.AccessibilityUtil;
-import com.android.messaging.util.Assert;
-import com.android.messaging.util.AvatarUriUtil;
-import com.android.messaging.util.ContentType;
-import com.android.messaging.util.ImageUtils;
-import com.android.messaging.util.OsUtil;
-import com.android.messaging.util.PhoneUtils;
-import com.android.messaging.util.UiUtils;
-import com.android.messaging.util.YouTubeUtil;
+import com.android.messaging.util.*;
 import com.google.common.base.Predicate;
 
 import java.util.Collections;
@@ -79,13 +58,14 @@ import java.util.List;
 /**
  * The view for a single entry in a conversation.
  */
-public class ConversationMessageView extends FrameLayout implements View.OnClickListener,
+public class ConversationMessageView extends RelativeLayout implements View.OnClickListener,
         View.OnLongClickListener, OnAttachmentClickListener {
     public interface ConversationMessageViewHost {
         boolean onAttachmentClick(ConversationMessageView view, MessagePartData attachment,
-                Rect imageBounds, boolean longPress);
+                                  Rect imageBounds, boolean longPress);
+
         SubscriptionListEntry getSubscriptionEntryForSelfParticipant(String selfParticipantId,
-                boolean excludeDefault);
+                                                                     boolean excludeDefault);
     }
 
     private final ConversationMessageData mData;
@@ -122,7 +102,7 @@ public class ConversationMessageView extends FrameLayout implements View.OnClick
 
     @Override
     protected void onFinishInflate() {
-        mContactIconView = (ContactIconView) findViewById(R.id.conversation_icon);
+        mContactIconView = findViewById(R.id.conversation_icon);
         mContactIconView.setOnLongClickListener(new OnLongClickListener() {
             @Override
             public boolean onLongClick(final View view) {
@@ -131,31 +111,31 @@ public class ConversationMessageView extends FrameLayout implements View.OnClick
             }
         });
 
-        mMessageAttachmentsView = (LinearLayout) findViewById(R.id.message_attachments);
-        mMultiAttachmentView = (MultiAttachmentLayout) findViewById(R.id.multiple_attachments);
+        mMessageAttachmentsView = findViewById(R.id.message_attachments);
+        mMultiAttachmentView = findViewById(R.id.multiple_attachments);
         mMultiAttachmentView.setOnAttachmentClickListener(this);
 
-        mMessageImageView = (AsyncImageView) findViewById(R.id.message_image);
+        mMessageImageView = findViewById(R.id.message_image);
         mMessageImageView.setOnClickListener(this);
         mMessageImageView.setOnLongClickListener(this);
 
-        mMessageTextView = (TextView) findViewById(R.id.message_text);
+        mMessageTextView = findViewById(R.id.message_text);
         mMessageTextView.setOnClickListener(this);
         IgnoreLinkLongClickHelper.ignoreLinkLongClick(mMessageTextView, this);
 
-        mStatusTextView = (TextView) findViewById(R.id.message_status);
-        mTitleTextView = (TextView) findViewById(R.id.message_title);
-        mMmsInfoTextView = (TextView) findViewById(R.id.mms_info);
-        mMessageTitleLayout = (LinearLayout) findViewById(R.id.message_title_layout);
-        mSenderNameTextView = (TextView) findViewById(R.id.message_sender_name);
-        mMessageBubble = (ConversationMessageBubbleView) findViewById(R.id.message_content);
+        mStatusTextView = findViewById(R.id.message_status);
+        mTitleTextView = findViewById(R.id.message_title);
+        mMmsInfoTextView = findViewById(R.id.mms_info);
+        mMessageTitleLayout = findViewById(R.id.message_title_layout);
+        mSenderNameTextView = findViewById(R.id.message_sender_name);
+        mMessageBubble = findViewById(R.id.message_content);
         mSubjectView = findViewById(R.id.subject_container);
-        mSubjectLabel = (TextView) mSubjectView.findViewById(R.id.subject_label);
-        mSubjectText = (TextView) mSubjectView.findViewById(R.id.subject_text);
+        mSubjectLabel = mSubjectView.findViewById(R.id.subject_label);
+        mSubjectText = mSubjectView.findViewById(R.id.subject_text);
         mDeliveredBadge = findViewById(R.id.smsDeliveredBadge);
-        mMessageMetadataView = (ViewGroup) findViewById(R.id.message_metadata);
-        mMessageTextAndInfoView = (ViewGroup) findViewById(R.id.message_text_and_info);
-        mSimNameView = (TextView) findViewById(R.id.sim_name);
+        mMessageMetadataView = findViewById(R.id.message_metadata);
+        mMessageTextAndInfoView = findViewById(R.id.message_text_and_info);
+        mSimNameView = findViewById(R.id.sim_name);
     }
 
     @Override
@@ -175,7 +155,7 @@ public class ConversationMessageView extends FrameLayout implements View.OnClick
         // We need to subtract contact icon width twice from the horizontal space to get
         // the max leftover space because we want the message bubble to extend no further than the
         // starting position of the message bubble in the opposite direction.
-        final int maxLeftoverSpace = horizontalSpace - mContactIconView.getMeasuredWidth() * 2
+        final int maxLeftoverSpace = horizontalSpace - mContactIconView.getMeasuredWidth()
                 - arrowWidth - getPaddingLeft() - getPaddingRight();
         final int messageContentWidthMeasureSpec = MeasureSpec.makeMeasureSpec(maxLeftoverSpace,
                 MeasureSpec.AT_MOST);
@@ -184,7 +164,7 @@ public class ConversationMessageView extends FrameLayout implements View.OnClick
 
         final int maxHeight = Math.max(mContactIconView.getMeasuredHeight(),
                 mMessageBubble.getMeasuredHeight());
-        setMeasuredDimension(horizontalSpace, maxHeight + getPaddingBottom() + getPaddingTop());
+        setMeasuredDimension(horizontalSpace, maxHeight + getPaddingBottom() + getPaddingTop() * 2);
     }
 
     @Override
@@ -197,7 +177,7 @@ public class ConversationMessageView extends FrameLayout implements View.OnClick
         final int iconTop = getPaddingTop();
         final int contentWidth = (right -left) - iconWidth - getPaddingLeft() - getPaddingRight();
         final int contentHeight = mMessageBubble.getMeasuredHeight();
-        final int contentTop = iconTop;
+        final int contentTop = iconTop * 2;
 
         final int iconLeft;
         final int contentLeft;
@@ -220,7 +200,6 @@ public class ConversationMessageView extends FrameLayout implements View.OnClick
         }
 
         mContactIconView.layout(iconLeft, iconTop, iconLeft + iconWidth, iconTop + iconHeight);
-
         mMessageBubble.layout(contentLeft, contentTop, contentLeft + contentWidth,
                 contentTop + contentHeight);
     }
@@ -300,10 +279,7 @@ public class ConversationMessageView extends FrameLayout implements View.OnClick
         }
         final String subjectText = MmsUtils.cleanseMmsSubject(getResources(),
                 mData.getMmsSubject());
-        if (!TextUtils.isEmpty(subjectText)) {
-            return true;
-        }
-        return false;
+        return !TextUtils.isEmpty(subjectText);
     }
 
     private void updateViewContent() {

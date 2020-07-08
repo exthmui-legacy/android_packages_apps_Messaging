@@ -19,7 +19,6 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
-
 import com.android.messaging.Factory;
 import com.android.messaging.R;
 import com.android.messaging.util.ImageUtils;
@@ -135,7 +134,7 @@ public class ConversationDrawables {
                     int idcolor = Math.abs(identifier.hashCode()) % mColors.length();
                     color = mColors.getColor(idcolor, mThemeColor);
                 } else {
-                    color = mThemeColor;
+                    color = mOutgoingBubbleColor;
                 }
             }
         } else {

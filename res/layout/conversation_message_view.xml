@@ -27,7 +27,6 @@
         android:layout_height="@dimen/conversation_message_contact_icon_size"
         app:iconSize="normal"
         android:clickable="true"
-        android:layout_gravity="center_vertical"
         android:importantForAccessibility="no" />
 
     <com.android.messaging.ui.conversation.ConversationMessageBubbleView
@@ -69,21 +68,21 @@
         </LinearLayout>
 
         <com.android.messaging.ui.conversation.MessageBubbleBackground
-            android:id="@+id/message_text_and_info"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:forceDarkAllowed="false">
-
-            <LinearLayout
-                android:id="@+id/message_title_layout"
-                android:orientation="vertical"
+                android:id="@+id/message_text_and_info"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
-                android:importantForAccessibility="noHideDescendants" >
+                android:orientation="vertical"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:forceDarkAllowed="false">
+
+            <LinearLayout
+                    android:id="@+id/message_title_layout"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:importantForAccessibility="noHideDescendants">
 
                 <TextView
                     android:id="@+id/message_title"

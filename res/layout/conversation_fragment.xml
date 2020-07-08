@@ -35,12 +35,12 @@
             android:layout_weight="1" >
             <!-- Message list -->
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@android:id/list"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:listSelector="@android:color/transparent"
-                android:paddingTop="@dimen/action_bar_height"
-                android:clipToPadding="false" />
+                    android:id="@android:id/list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:listSelector="@android:color/transparent"
+                    android:paddingBottom="15dp"
+                    android:clipToPadding="false" />
 
             <View
                 android:id="@+id/conversation_compose_divider"
