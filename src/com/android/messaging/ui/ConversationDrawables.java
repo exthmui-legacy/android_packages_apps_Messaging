@@ -135,7 +135,7 @@ public class ConversationDrawables {
                     int idcolor = Math.abs(identifier.hashCode()) % mColors.length();
                     color = mColors.getColor(idcolor, mThemeColor);
                 } else {
-                    color = mThemeColor;
+                    color = mOutgoingBubbleColor;
                 }
             }
         } else {

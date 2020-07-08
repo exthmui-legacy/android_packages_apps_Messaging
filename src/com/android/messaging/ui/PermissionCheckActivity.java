@@ -60,21 +60,13 @@ public class PermissionCheckActivity extends Activity {
         });
 
         mNextView = (TextView) findViewById(R.id.next);
-        mNextView.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(final View view) {
-                tryRequestPermission();
-            }
-        });
+        mNextView.setOnClickListener(view -> tryRequestPermission());
 
         mSettingsView = (TextView) findViewById(R.id.settings);
-        mSettingsView.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(final View view) {
-                final Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
-                        Uri.parse(PACKAGE_URI_PREFIX + getPackageName()));
-                startActivity(intent);
-            }
+        mSettingsView.setOnClickListener(view -> {
+            final Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
+                    Uri.parse(PACKAGE_URI_PREFIX + getPackageName()));
+            startActivity(intent);
         });
     }
 
