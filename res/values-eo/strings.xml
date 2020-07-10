@@ -57,10 +57,8 @@
     <string name="notification_picture">Bildo</string>
     <string name="settings_activity_title">Agordoj</string>
     <string name="notifications_pref_title">Sciigoj</string>
-    <string name="message_context_menu_delete_message">Forigi</string>
     <string name="chips_text_delete_button_content_description">Forigi tekston</string>
     <string name="notifications_enabled_conversation_pref_title">Sciigoj</string>
-    <string name="conversation_list_item_view_sent_from_you_prefix">Vi:\u0020</string>
     <string name="conversation_list_item_view_draft_message">Malneto</string>
     <string name="conversation_list_snippet_picture">Bildo</string>
     <string name="in_conversation_notify_new_message_text">Nova mesaĝo</string>
@@ -68,5 +66,4 @@
     <string name="share_cancel">Nuligi</string>
     <string name="secondary_user_new_message_title">Nova mesaĝo</string>
     <string name="secondary_user_new_message_ticker">Nova mesaĝo.</string>
-    <string name="widget_new_message_content_description">Nova mesaĝo</string>
 </resources>

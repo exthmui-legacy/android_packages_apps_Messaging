@@ -26,10 +26,7 @@
     <string name="action_settings">Settings</string>
     <string name="sendButtonContentDescription">Send Message</string>
     <string name="attachMediaButtonContentDescription">Add an attachment</string>
-    <string name="help_and_feedback_activity_label">Help</string>
 
-    <string name="welcome">Welcome</string>
-    <string name="skip">Skip</string>
     <string name="next_with_arrow">Next &gt;</string>
     <string name="next">Next</string>
     <string name="exit">Exit</string>
@@ -117,7 +114,6 @@
     <string name="save">Save</string>
 
     <!-- Text for SMS storage low text, when auto delete is enabled -->
-    <string name="sms_storage_low_auto_delete_enabled_dialog_text">Device is low on space. Messaging will automatically delete older messages to free up space.</string>
     <!-- Title for SMS storage low notification and dialog. Must match the framework's notification title, i.e. //frameworks/base/core/res/res/values/strings.xml#low_internal_storage_view_title -->
     <string name="sms_storage_low_title">Storage space running out</string>
     <!-- Text for SMS storage low notification and dialog -->
@@ -135,7 +131,6 @@
     <!-- Free SMS storage actions -->
     <string name="delete_all_media">Delete all messages with media</string>
     <string name="delete_oldest_messages">Delete messages older than <xliff:g id="duration">%s</xliff:g></string>
-    <string name="auto_delete_oldest_messages">Auto-delete messages older than <xliff:g id="duration">%s</xliff:g></string>
     <string name="ignore">Ignore</string>
 
     <!-- Free SMS storage action confirm dialog message -->
@@ -166,7 +161,6 @@
     <string name="message_status_send_failed_emergency_number">Please make a voice call to emergency services. Your text message could not be delivered at this time.</string>
 
     <!-- When showing resend action, display this message. -->
-    <string name="message_status_failed">Failed</string>
 
     <!-- Title line for an MMS requiring manual download. -->
     <string name="message_title_manual_download">New MMS message to download</string>
@@ -187,27 +181,20 @@
     <!-- Display this info line with an MMS notification -->
     <string name="mms_info">size: <xliff:g id="messageSize">%1$s</xliff:g>, expiration: <xliff:g id="messageExpire">%2$s</xliff:g></string>
     <!-- While sending a message, if it has invalid recipient, display this message. -->
-    <string name="invalid_destination">Can\'t send. Recipient not valid.</string>
     <!-- While sending a message, this error is expected to be generated when user does not have
          MMS enabled on his account. [CHAR LIMIT=NONE] -->
-    <string name="service_not_activated">Service not activated on network</string>
     <!-- If a message can't be sent because of a MMSC network problem, show this toast. [CHAR LIMIT=NONE] -->
-    <string name="service_network_problem">Couldn\'t send due to network problem</string>
     <!-- If a message has expired and is no longer available on MMSC, show this toast. [CHAR LIMIT=NONE] -->
-    <string name="service_message_not_found">Message expired or not available</string>
     <!-- Download Manager -->
     <!-- When an error occurs downloading a new message and a subject isn't available, substitute
          this default subject. -->
-    <string name="no_subject">(No subject)</string>
     <!-- When an error occurs downloading a new message and the sender is unknown, substitute
          this default text. -->
     <string name="unknown_sender">Unknown sender</string>
     <string name="delivered_status_content_description">Delivered</string>
     <!-- When an error occurs downloading a new message, display this message.
          An example: Download of message Wanna get pizza from dorkman was unsuccessful. -->
-    <string name="dl_failure_notification">Couldn\'t download message <xliff:g id="subject">%1$s</xliff:g> from <xliff:g id="from">%2$s</xliff:g>.</string>
     <!-- When a database error occurs due to low memory this toast is shown. -->
-    <string name="low_memory">Couldn\'t complete database operation due to low memory</string>
     <!-- notification line 1 for "there are some failed messages" -->
     <string name="notification_send_failures_line1_singular">Message not sent</string>
     <!-- notification line 1 for "there are some failed messages" -->
@@ -238,7 +225,6 @@
     </plurals>
 
     <!-- Text for starting a new conversation button in the compose UI -->
-    <string name="start_conversation">Start</string>
 
     <string name="camera_error_opening">Camera not available</string>
     <string name="camera_error_unknown">Camera not available</string>
@@ -343,9 +329,7 @@
          Displays the number of conversations unarchived -->
     <string name="unarchived_toast_message"><xliff:g id="count">%d</xliff:g> unarchived</string>
     <!-- The text of the toast/snack message shown when a notifications turned off for selected conversations -->
-    <string name="notification_off_toast_message">Notifications turned off</string>
     <!-- The text of the toast/snack message shown when a notifications turned on for selected conversations -->
-    <string name="notification_on_toast_message">Notifications turned on</string>
 
     <!-- Toast shown when the user tries to send a message, and then sets Bugle as the default SMS app. -->
     <string name="toast_after_setting_default_sms_app_for_message_send">All set. Tap Send again.</string>
@@ -381,7 +365,6 @@
     <string name="failed_message_content_description">Failed message. Tap to retry.</string>
 
     <!-- Accessibility name for a group conversation -->
-    <string name="group_conversation_description">Conversation with <xliff:g id="participants">%s</xliff:g></string>
 
     <!-- Accessibility : text read on the small X icon on the subject editor -->
     <string name="delete_subject_content_description">Delete subject</string>
@@ -428,7 +411,6 @@
     <!-- Title for the archived conversations activity -->
     <string name="archived_activity_title">Archived</string>
     <!-- Action title: Close -->
-    <string name="action_close">Close</string>
     <!-- Preference category: MMS messaging -->
     <string name="mms_messaging_category_pref_title">MMS</string>
     <!-- Preference category: Advanced -->
@@ -438,8 +420,6 @@
     <!-- Title for the preference for whether or to notify the user of new messages -->
     <string name="notifications_pref_title">Notifications</string>
     <!-- Title for the notification sound preference -->
-    <string name="silent_ringtone">Silent</string>
-    <string name="blocked_pref_title">Blocked</string>
     <!-- Title for the preference for whether or not to request/show delivery reports for SMS -->
     <string name="delivery_reports_pref_title">SMS delivery reports</string>
     <string name="delivery_reports_pref_summary">Request a delivery report for each SMS you send</string>
@@ -449,7 +429,6 @@
     <string name="auto_retrieve_mms_when_roaming_pref_title">Roaming auto-retrieve</string>
     <string name="auto_retrieve_mms_when_roaming_pref_summary">Automatically retrieve MMS when roaming</string>
     <string name="group_mms_pref_title">Group messaging</string>
-    <string name="group_mms_pref_summary">Use MMS to send a single message when there are multiple recipients</string>
     <!-- Preference title: SMS disabled (Messaging is not default SMS app) -->
     <string name="sms_disabled_pref_title">Default SMS app</string>
     <!-- Preference title: SMS enabled (Messaging is the default SMS app) -->
@@ -475,13 +454,11 @@
     <string name="wireless_alerts_title">Wireless alerts</string>
 
     <!-- Title of long press menu on an individual message. -->
-    <string name="message_context_menu_title">Message options</string>
     <!-- Menu item to copy message text -->
     <string name="message_context_menu_copy_text">Copy text</string>
     <!-- Title of long press menu for details about an individual message. -->
     <string name="message_context_menu_view_details">View details</string>
     <!-- Title of long press menu for deleting an individual message. -->
-    <string name="message_context_menu_delete_message">Delete</string>
     <!-- Title of long press menu for forwarding an individual message. -->
     <string name="message_context_menu_forward_message">Forward</string>
     <!-- Title of "Message details" dialog -->
@@ -521,7 +498,6 @@
     <!-- Shows when the user attempts to send message while some attachment(s) haven't finished loading -->
     <string name="cant_send_message_while_loading_attachments">Can\'t send message while loading attachments.</string>
     <!-- Notifies the user when an attachment fails to load -->
-    <string name="fail_to_load_attachment">Can\'t load attachment. Try again.</string>
     <!-- Shows when the user attempts to send message when there is no active subscription -->
     <string name="cant_send_message_without_active_subscription">Network is not ready. Try again.</string>
 
@@ -581,13 +557,9 @@
         <item quantity="other"><xliff:g id="attachment_count">%d</xliff:g> attachments ready to send</item>
     </plurals>
     <!-- Action menu title in the HelpAndFeedbackFragment to let users send feedback -->
-    <string name="menu_send_feedback">Send feedback</string>
     <!-- Action menu title in the HelpAndFeedbackFragment to let users view the app in the Google Play Store -->
-    <string name="menu_view_in_store">View in Google Play Store</string>
     <!-- Action menu title in the HelpAndFeedbackFragment to let users view the version of Bugle -->
-    <string name="menu_version_info">Version info</string>
     <!-- The format of the subtitle of the help activity. -->
-    <string name="subtitle_format_for_version_number">Version %1$s</string>
 
     <!--  Action menu title to let users view open source license -->
     <string name="menu_license">Open source licenses</string>
@@ -596,7 +568,6 @@
     <!-- Reached MMS message attachment limit -->
     <string name="mms_attachment_limit_reached">Attachment limit reached</string>
     <!-- Message attachment load failed -->
-    <string name="mms_attachment_load_failed">Failed to load attachment.</string>
     <!-- Alert dialog title to accept or decline adding the given phone number to your contacts. -->
     <string name="add_contact_confirmation_dialog_title">Add to Contacts?</string>
     <!-- Alert dialog accept adding the given phone number to your contacts button. -->
@@ -629,7 +600,6 @@
     <!-- Title for the message forwarding dialog -->
     <string name="forward_message_activity_title">Forward message</string>
     <!-- Title for the message reply dialog -->
-    <string name="reply_activity_title">Reply</string>
 
     <!-- String to show when eliding the number of participants in a conversation due to length (used when there is one extra) -->
     <string name="plus_one">+1</string>
@@ -652,7 +622,6 @@
 
     <!-- Toast message that indicates uses must set Messaging as their
          default SMS application in order to receive replies in the app. -->
-    <string name="recommend_set_default_sms_app">To receive messages, set Messaging as the default SMS app</string>
 
     <!-- Toast message that indicates no preferred SIM was selected for sending the message -->
     <string name="no_preferred_sim_selected">No preferred SIM selected for sending SMS messages</string>
@@ -674,10 +643,8 @@
     <string name="camera_media_failure">Couldn\'t load camera image</string>
 
     <!-- A message prefix to indicate the message was sent by the user. -->
-    <string name="conversation_list_item_view_sent_from_you_prefix">You:\u0020</string>
 
     <!-- A message prefix to indicate the message was sent by another user in a group conversation. -->
-    <string name="conversation_list_item_view_sent_from_other_prefix"><xliff:g id="firstNameOfSender">%s</xliff:g>:\u0020</string>
 
     <!-- A message in conversation list view to indicate that the snipit text and preview is from an unsent draft. -->
     <string name="conversation_list_item_view_draft_message">Draft</string>
@@ -730,10 +697,8 @@
     <string name="tap_to_unblock_message">UNBLOCK</string>
 
     <!-- Action menu title for viewing the list of blocked contacts -->
-    <string name="view_blocked_contacts_title">Blocked contacts</string>
 
     <!-- Content description for the button in gallery media picker to pick an image from the document library -->
-    <string name="pick_image_from_document_library_content_description">Choose image from document library</string>
     <!-- Accessibility toast shown when a message is sending. -->
     <string name="sending_message">Sending message</string>
     <!-- Accessibility toast shown when a message is sent. -->
@@ -810,7 +775,6 @@
     <!-- Edit access point labels: A label the user can give to the APN to allow him to differentiate it from the others -->
     <string name="apn_name">Name</string>
     <!-- Edit access point labels: The actual access point name-->
-    <string name="apn_apn">APN</string>
     <!-- Edit access point labels: -->
     <string name="apn_mmsc">MMSC</string>
     <!-- Edit access point labels: The proxy to use for MMS (multimedia messages)-->
@@ -822,7 +786,6 @@
     <!-- Edit access point labels: -->
     <string name="apn_mnc">MNC</string>
     <!-- Edit access point labels: The type of APN -->
-    <string name="apn_type">APN type</string>
     <!-- Edit access point screen menu option to delete this APN -->
     <string name="menu_delete_apn">Delete APN</string>
     <!-- APNs screen menu option to create a brand spanking new APN -->
@@ -834,7 +797,6 @@
     <!-- APN error dialog messages: -->
     <string name="error_apn_name_empty">The Name field can\'t be empty.</string>
     <!-- APN error dialog messages: -->
-    <string name="error_apn_empty">The APN can\'t be empty.</string>
     <!-- APN error dialog messages: -->
     <string name="error_mcc_not3">MCC field must be 3 digits.</string>
     <!-- APN error dialog messages: -->
@@ -852,7 +814,6 @@
     <!-- Title for Access Point Names settings activity -->
     <string name="apn_settings">APNs</string>
     <!-- APNs screen menu option to create a brand spanking new APN -->
-    <string name="menu_new">New APN</string>
     <!-- Error message for users that aren't allowed to modify Access Point Names settings [CHAR LIMIT=none] -->
     <string name="apn_settings_not_available">Access Point Name settings are not available for this user</string>
     <!-- Alert dialog title to copy information displayed in dialog to system clipboard. -->
@@ -904,30 +865,19 @@
     <string name="audio_record_view_content_description">Tap &amp; hold to record audio</string>
 
     <!-- Content description for new conversation button in desktop widget -->
-    <string name="widget_new_conversation_content_description">Start new conversation</string>
     <!-- Content description for widget title -->
-    <string name="widget_title_content_description">Messaging</string>
     <!-- Displayed name of the desktop widget that shows the list of conversations-->
-    <string name="widget_conversation_list_name">Messaging List</string>
     <!-- Displayed name of the desktop widget that shows a single conversation-->
-    <string name="widget_conversation_name">Messaging</string>
     <!-- Content description for new message button in desktop widget -->
-    <string name="widget_new_message_content_description">New message</string>
     <!-- Content description for conversation list button in desktop widget -->
-    <string name="widget_conversation_list_content_description">Conversation list</string>
     <!-- Shown when loading conversations in the widget -->
-    <string name="loading_conversations">Loading conversations</string>
     <!-- Shown when loading messages in the widget -->
-    <string name="loading_messages">Loading messages</string>
     <!-- Displayed at the end of the conversation list in the widget. Tapping on this will open bugle home activity. [CHAR LIMIT=35] -->
-    <string name="view_more_conversations">View more conversations</string>
     <!-- Displayed at the beginning of the message list in the widget. Tapping on this will open bugle home activity. [CHAR LIMIT=35] -->
-    <string name="view_more_messages">View more messages</string>
     <!-- Toast message telling the user a conversation has been deleted -->
     <string name="conversation_deleted">Conversation deleted</string>
     <!-- Displayed when user adds a new conversation widget. Tapping on the widget in this
           mode will bring user to the conversation selection screen -->
-    <string name="tap_to_configure">Conversation deleted. Tap to show a different Messaging conversation</string>
 
     <!-- Toast message telling the user that someone was blocked -->
     <string name="update_destination_blocked">Blocked</string>

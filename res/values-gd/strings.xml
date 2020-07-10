@@ -16,7 +16,6 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="action_settings">Roghainnean</string>
-    <string name="help_and_feedback_activity_label">Cobhair</string>
     <string name="next_with_arrow">Air adhart &gt;</string>
     <string name="next">Air adhart</string>
     <string name="settings">Roghainnean</string>
@@ -39,14 +38,10 @@
     <string name="action_confirm_multiselect">Dearbh an taghadh</string>
     <string name="unknown_self_participant">Uam</string>
     <string name="settings_activity_title">Roghainnean</string>
-    <string name="action_close">Dùin</string>
     <string name="notifications_pref_title">Brathan</string>
-    <string name="silent_ringtone">’Na thost</string>
     <string name="mms_phone_number_pref_title">An àireamh fòn agad</string>
-    <string name="message_context_menu_title">Roghainnean na teachdaireachd</string>
     <string name="message_context_menu_view_details">Seall am mion-fhiosrachadh</string>
     <string name="chips_text_delete_button_content_description">Sguab às an teacsa</string>
-    <string name="menu_version_info">Fiosrachadh mun tionndadh</string>
     <string name="menu_license">Ceadachasan Open Source</string>
     <string name="notifications_enabled_conversation_pref_title">Brathan</string>
     <string name="vcard_detail_birthday_label">Co-là breith</string>
@@ -65,11 +60,9 @@
     <string name="menu_new_apn">APN ùr</string>
     <string name="menu_save_apn">Sàbhail</string>
     <string name="menu_discard_apn_change">Tilg air falbh</string>
-    <string name="menu_new">APN ùr</string>
     <string name="advanced_settings_activity_title">Roghainnean adhartach</string>
     <string name="sim_settings_unknown_number">Àireamh nach aithne dhuinn</string>
     <string name="secondary_user_new_message_title">Teachdaireachd ùr</string>
-    <string name="widget_new_message_content_description">Teachdaireachd ùr</string>
     <string name="action_confirm_selection">Dearbh an taghadh</string>
     <string name="attachment_chooser_selection"><xliff:g id="count">%d</xliff:g> air a thaghadh</string>
 </resources>

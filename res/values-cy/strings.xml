@@ -21,9 +21,6 @@
     <string name="action_settings">Gosodiadau</string>
     <string name="sendButtonContentDescription">Anfon Neges</string>
     <string name="attachMediaButtonContentDescription">Ychwanegu atodiad</string>
-    <string name="help_and_feedback_activity_label">Cymorth</string>
-    <string name="welcome">Croeso</string>
-    <string name="skip">Neidio</string>
     <string name="next_with_arrow">Nesaf &gt;</string>
     <string name="next">Nesaf</string>
     <string name="exit">Cau</string>
@@ -101,7 +98,6 @@
     </plurals>
     <string name="class_0_message_activity">Neges dosbarth 0</string>
     <string name="save">Cadw</string>
-    <string name="sms_storage_low_auto_delete_enabled_dialog_text">Does dim llawer o le yn weddill ar y ddyfais. Bydd negeseuon hyn yn cael eu dileu yn awtomatig i ryddhau lle.</string>
     <string name="sms_storage_low_title">Yn rhedeg yn brin o le storio</string>
     <string name="sms_storage_low_text">Mae\'n bosib na fydd Negesu yn anfon na derbyn negeseuon hyd nes bod mwy o le ar gael ar dy ddyfais.</string>
     <string name="sms_storage_low_notification_ticker">Nid oes lawer o le i storio SMS. Mae\'n bosib bydd rhaid dileu negeseuon.</string>
@@ -110,7 +106,6 @@
     <string name="enter_phone_number_hint">Rhif ffôn</string>
     <string name="delete_all_media">Dileu pob neges sydd â chyfrwng</string>
     <string name="delete_oldest_messages">Dileu negeseuon sy\'n hyn na <xliff:g id="duration">%s</xliff:g></string>
-    <string name="auto_delete_oldest_messages">Awto-dileu negeseuon sy\'n hyn na <xliff:g id="duration">%s</xliff:g></string>
     <string name="ignore">Anwybyddu</string>
     <string name="delete_all_media_confirmation">Dileu pob neges gyda chyfrwng?</string>
     <string name="delete_oldest_messages_confirmation">Dileu negeseuon sy\'n hyn na <xliff:g id="duration">%s</xliff:g>?</string>
@@ -124,7 +119,6 @@
     <string name="message_status_send_retrying">Heb ei anfon. Yn ceisio eto…</string>
     <string name="message_status_resend">Ail-anfon neu ddileu</string>
     <string name="message_status_send_failed_emergency_number">Gwna alwad llais i\'r gwasanaethau brys. Dyw dy neges destun heb ei anfon ar hyn o bryd.</string>
-    <string name="message_status_failed">Wedi methu</string>
     <string name="message_title_manual_download">Neges MMS newydd i\'w lawrlwytho</string>
     <string name="message_title_downloading">Neges MMS newydd</string>
     <string name="message_title_download_failed">Methwyd â lawrlwytho</string>
@@ -134,15 +128,8 @@
     <string name="message_status_downloading">Yn lawrlwytho…</string>
     <string name="message_status_download_error">Neges wedi dod i ben neu ddim ar gael</string>
     <string name="mms_info">maint: <xliff:g id="messageSize">%1$s</xliff:g>, dod i ben: <xliff:g id="messageExpire">%2$s</xliff:g></string>
-    <string name="invalid_destination">Methu ag anfon. Derbynnydd annilys.</string>
-    <string name="service_not_activated">Gwasanaeth heb ei actifadu ar y rhwydwaith</string>
-    <string name="service_network_problem">Methwyd ag anfon o achos problem rhwydwaith</string>
-    <string name="service_message_not_found">Neges wedi dod i ben neu ddim ar gael</string>
-    <string name="no_subject">(Dim pwnc)</string>
     <string name="unknown_sender">Anfonwr anhysbys</string>
     <string name="delivered_status_content_description">Wedi\'i derbyn</string>
-    <string name="dl_failure_notification">Methwyd â lawrlwytho\'r neges <xliff:g id="subject">%1$s</xliff:g> oddi wrth <xliff:g id="from">%2$s</xliff:g>.</string>
-    <string name="low_memory">Methwyd â chwblhau weithred y gronfa ddata gan nad oed digon o gof</string>
     <string name="notification_send_failures_line1_singular">Neges heb ei anfon</string>
     <string name="notification_send_failures_line1_plural">Dyw rhai negeseuon heb eu hanfon yn Negeseua</string>
     <plurals name="notification_send_failures">
@@ -173,7 +160,6 @@
         <item quantity="many"><xliff:g id="messages">%d</xliff:g> neges newydd</item>
         <item quantity="other"><xliff:g id="messages">%d</xliff:g> neges newydd</item>
     </plurals>
-    <string name="start_conversation">Dechrau</string>
     <string name="camera_error_opening">Camera ddim ar gael</string>
     <string name="camera_error_unknown">Camera ddim ar gael</string>
     <string name="camera_error_video_init_fail">Cipio fideo dim ar gael</string>
@@ -233,8 +219,6 @@
     <string name="unblocked_toast_message">Cyswllt wedi\'i dadrwystro a\'i dynnu o\'r archif</string>
     <string name="archived_toast_message"><xliff:g id="count">%d</xliff:g> wedi\'u harchifo</string>
     <string name="unarchived_toast_message"><xliff:g id="count">%d</xliff:g> wedi\'u dad-archifo</string>
-    <string name="notification_off_toast_message">Hysbysiadau i ffwrdd</string>
-    <string name="notification_on_toast_message">Hysbysiadau ymlaen</string>
     <string name="toast_after_setting_default_sms_app_for_message_send">Yn barod. Tapia Anfon unwaith eto.</string>
     <string name="toast_after_setting_default_sms_app">Gosodwyd Negesu fel yr ap rhagosodedig ar gyfer SMS.</string>
     <plurals name="attachment_preview_close_content_description">
@@ -262,7 +246,6 @@
     <string name="group_outgoing_failed_message_prefix">Neges wedi methu at <xliff:g id="group">%1$s</xliff:g>: <xliff:g id="message">%2$s</xliff:g>. Amser: <xliff:g id="time">%3$s</xliff:g>.</string>
     <string name="group_outgoing_successful_message_prefix">Neges at <xliff:g id="group">%1$s</xliff:g>: <xliff:g id="message">%2$s</xliff:g>. Amser: <xliff:g id="time">%3$s</xliff:g>.</string>
     <string name="failed_message_content_description">Methodd y neges. Tapia i geisio eto.</string>
-    <string name="group_conversation_description">Sgwrs gyda <xliff:g id="participants">%s</xliff:g></string>
     <string name="delete_subject_content_description">Dileu\'r pwnc</string>
     <string name="camera_switch_to_video_mode">Cipio fideo</string>
     <string name="camera_switch_to_still_mode">Cipio llun llonydd</string>
@@ -324,13 +307,10 @@
     <string name="attachment_file_description">Atodiad MMS wedi\'i gadw</string>
     <string name="settings_activity_title">Gosodiadau</string>
     <string name="archived_activity_title">Wedi\'u harchifo</string>
-    <string name="action_close">Cau</string>
     <string name="mms_messaging_category_pref_title">MMS</string>
     <string name="advanced_category_pref_title">Uwch</string>
     <string name="debug_category_pref_title">Dadfygio</string>
     <string name="notifications_pref_title">Hysbysiadau</string>
-    <string name="silent_ringtone">Distaw</string>
-    <string name="blocked_pref_title">Wedi\'i rhwystro</string>
     <string name="delivery_reports_pref_title">Adroddiadau danfon SMS</string>
     <string name="delivery_reports_pref_summary">Gofyn am adroddiad ar gyfer pob neges SMS wyt ti\'n ei anfon i gadarnhau ei bod wedi cyrraedd</string>
     <string name="auto_retrieve_mms_pref_title">Cyrchu\'n awtomatig</string>
@@ -338,7 +318,6 @@
     <string name="auto_retrieve_mms_when_roaming_pref_title">Cyrchu\'n awtomatig wrth grwydro</string>
     <string name="auto_retrieve_mms_when_roaming_pref_summary">Nôl negeseuon MMS yn awtomatig wrth grwydro tramor</string>
     <string name="group_mms_pref_title">Negeseua grŵp</string>
-    <string name="group_mms_pref_summary">Defnyddia MMS i anfon yr un neges at nifer o bobol.</string>
     <string name="sms_disabled_pref_title">Ap SMS rhagosodedig</string>
     <string name="sms_enabled_pref_title">Ap SMS rhagosodedig</string>
     <string name="default_sms_app"><xliff:g id="app_name">%s</xliff:g></string>
@@ -350,10 +329,8 @@
     <string name="dump_mms_pref_title">Dympio MMS</string>
     <string name="dump_mms_pref_summary">Dympio data craidd negeseuon MMS a dderbyniwyd mewn i ffeil storfa allanol</string>
     <string name="wireless_alerts_title">Hysbysiadau di-wifr</string>
-    <string name="message_context_menu_title">Dewisiadau neges</string>
     <string name="message_context_menu_copy_text">Copïo\'r testun</string>
     <string name="message_context_menu_view_details">Gweld manylion</string>
-    <string name="message_context_menu_delete_message">Dileu</string>
     <string name="message_context_menu_forward_message">Anfon ymlaen</string>
     <string name="message_details_title">Manylion y neges</string>
     <string name="message_type_label">Math:\u0020</string>
@@ -373,7 +350,6 @@
     <string name="sim_slot_identifier">SIM <xliff:g id="sim_slot_number">%s</xliff:g></string>
     <string name="hidden_sender_address">Cyfeiriad anfonwr cudd</string>
     <string name="cant_send_message_while_loading_attachments">Methu ag anfon neges wrth lwytho atodiadau.</string>
-    <string name="fail_to_load_attachment">Methu â llwytho\'r atodiad. Ceisia eto.</string>
     <string name="cant_send_message_without_active_subscription">Dyw\'r rhwydwaith ddim yn barod. Ceisia eto.</string>
     <string name="chips_text_delete_button_content_description">Dileu testun</string>
     <string name="numeric_text_keyboard_toggle_button_content_description">Newid rhwng mewnbynnu testun a rhifau</string>
@@ -438,14 +414,9 @@
         <item quantity="many"><xliff:g id="attachment_count">%d</xliff:g> atodiad yn barod i\'w hanfon</item>
         <item quantity="other"><xliff:g id="attachment_count">%d</xliff:g> atodiad yn barod i\'w hanfon</item>
     </plurals>
-    <string name="menu_send_feedback">Anfon adborth</string>
-    <string name="menu_view_in_store">Gweld yn Google Play Store</string>
-    <string name="menu_version_info">Gwybodaeth am y fersiwn</string>
-    <string name="subtitle_format_for_version_number">Fersiwn %1$s</string>
     <string name="menu_license">Trwyddedau cod agored</string>
     <string name="notifications_enabled_conversation_pref_title">Hysbysiadau</string>
     <string name="mms_attachment_limit_reached">Wedi cyrraedd mwyafswm atodiadau</string>
-    <string name="mms_attachment_load_failed">Methwyd â llwytho atodiad.</string>
     <string name="add_contact_confirmation_dialog_title">Ychwanegu at Gysylltiadau?</string>
     <string name="add_contact_confirmation">Ychwanegu Cyswllt</string>
     <string name="compose_message_view_subject_hint_text">Pwnc</string>
@@ -466,14 +437,12 @@
     <string name="vcard_detail_birthday_label">Pen-blwydd</string>
     <string name="vcard_detail_notes_label">Nodiadau</string>
     <string name="forward_message_activity_title">Anfon y neges ymlaen</string>
-    <string name="reply_activity_title">Ateb</string>
     <string name="plus_one">+1</string>
     <string name="plus_n">+%d</string>
     <string name="sms_disabled">SMS wedi\'i analluogi</string>
     <string name="requires_default_sms_app_to_send">I anfon y neges, gosoda Negesu fel yr ap SMS rhagosodedig.</string>
     <string name="requires_default_sms_app">Gosod Negesu fel yr ap SMS rhagosodedig</string>
     <string name="requires_default_sms_change_button">Newid</string>
-    <string name="recommend_set_default_sms_app">I dderbyn negeseuon, gosoda Negesu fel yr ap SMS rhagosodedig</string>
     <string name="no_preferred_sim_selected">Nid oes SIM wedi\'i ddewis i\'w ffafrio ar gyfer anfon negeseuon SMS.</string>
     <string name="requires_sms_permissions_message">Nid yw perchennog y ddyfais yn caniatáu\'r ap hwn.</string>
     <string name="requires_sms_permissions_close_button">Iawn</string>
@@ -487,8 +456,6 @@
         <item quantity="other">Cysylltiadau annilys</item>
     </plurals>
     <string name="camera_media_failure">Methwyd â llwytho delwedd camera</string>
-    <string name="conversation_list_item_view_sent_from_you_prefix">Ti:\u0020</string>
-    <string name="conversation_list_item_view_sent_from_other_prefix"><xliff:g id="firstNameOfSender">%s</xliff:g>:\u0020</string>
     <string name="conversation_list_item_view_draft_message">Drafft</string>
     <string name="conversation_list_empty_text">Pan fyddi\'n dechrau sgwrs newydd, mi fydd yn ymddangos mewn rhestr yma</string>
     <string name="archived_conversation_list_empty_text">Mae sgyrsiau wedi\'u harchifo yn ymddangos yma</string>
@@ -508,8 +475,6 @@
     <string name="block_confirmation_message">Mi fyddi\'n parhau i dderbyn negeseuon oddi wrth y rhif hwn ond ni fyddi di bellach yn cael dy hysbysu. Caiff y sgwrs hon ei harchifo.</string>
     <string name="blocked_contacts_title">Cysylltiadau a rhwystrwyd</string>
     <string name="tap_to_unblock_message">DADRWYSTRO</string>
-    <string name="view_blocked_contacts_title">Cysylltiadau a rhwystrwyd</string>
-    <string name="pick_image_from_document_library_content_description">Dewis delwedd o\'r llyfrgell dogfennau</string>
     <string name="sending_message">Anfon neges</string>
     <string name="send_message_success">Anfonwyd y neges</string>
     <string name="send_message_failure_no_data">Rhwydwaith symudol wedi\'i ddiffodd. Gwiria dy osodiadau.</string>
@@ -548,19 +513,16 @@
     <string name="apn_edit">Golygu pwynt mynediad</string>
     <string name="apn_not_set">Heb ei osod</string>
     <string name="apn_name">Enw</string>
-    <string name="apn_apn">Enw Pwynt Mynediad (APN)</string>
     <string name="apn_mmsc">MMSC</string>
     <string name="apn_mms_proxy">Procsi MMS</string>
     <string name="apn_mms_port">Porth MMS</string>
     <string name="apn_mcc">MCC</string>
     <string name="apn_mnc">MNC</string>
-    <string name="apn_type">Math APN</string>
     <string name="menu_delete_apn">Dileu APN</string>
     <string name="menu_new_apn">APN newydd</string>
     <string name="menu_save_apn">Cadw</string>
     <string name="menu_discard_apn_change">Gwaredu</string>
     <string name="error_apn_name_empty">Rhaid rhoi rhywbeth yn y maes Enw.</string>
-    <string name="error_apn_empty">Ni all yr APN fod yn wag.</string>
     <string name="error_mcc_not3">Rhaid i\'r maes MCC fod yn 3 digid.</string>
     <string name="error_mnc_not23">Rhaid i\'r maes MNC fod yn 2 neu 3 digid.</string>
     <string name="restore_default_apn">Yn adfer rhagosodiadau APN.</string>
@@ -569,7 +531,6 @@
     <string name="untitled_apn">Heb deitl</string>
     <string name="sms_apns_title">Enwau Pwyntiau Mynediad (APN)</string>
     <string name="apn_settings">APNau</string>
-    <string name="menu_new">APN newydd</string>
     <string name="apn_settings_not_available">Dyw gosodiadau Enwau Pwyntiau Mynediad (APN) ddim ar gael ar gyfer y defnyddiwr hwn.</string>
     <string name="copy_to_clipboard_dialog_title">Copïo i\'r clipfwrdd?</string>
     <string name="copy_to_clipboard">Copïo</string>
@@ -589,18 +550,7 @@
     <string name="send_button_long_click_description_no_sim_selector">Golygu pwnc</string>
     <string name="send_button_long_click_description_with_sim_selector">Dewis SIM neu olygu pwnc</string>
     <string name="audio_record_view_content_description">Tapia a dal i recordio sain</string>
-    <string name="widget_new_conversation_content_description">Dechrau sgwrs newydd</string>
-    <string name="widget_title_content_description">Negeseua</string>
-    <string name="widget_conversation_list_name">Rhestr Negeseuon</string>
-    <string name="widget_conversation_name">Negeseua</string>
-    <string name="widget_new_message_content_description">Neges newydd</string>
-    <string name="widget_conversation_list_content_description">Rhestr sgyrsiau</string>
-    <string name="loading_conversations">Yn llwytho sgyrsiau</string>
-    <string name="loading_messages">Yn llwytho negeseuon</string>
-    <string name="view_more_conversations">Gweld rhagor o sgyrsiau</string>
-    <string name="view_more_messages">Gweld rhagor o negeseuon</string>
     <string name="conversation_deleted">Dilëwyd y sgwrs</string>
-    <string name="tap_to_configure">Mae\'r sgwrs wedi ei dileu. Tapia i ddangos sgwrs negeseuon arall.</string>
     <string name="update_destination_blocked">Wedi\'i rhwystro</string>
     <string name="update_destination_unblocked">Wedi\'i dad-rwystro</string>
     <string name="db_full">Nid oes lawer o le i storio SMS. Mae\'n bosib caiff rhywfaint o ddata ei golli.</string>

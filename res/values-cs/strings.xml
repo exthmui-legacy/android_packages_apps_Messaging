@@ -23,9 +23,6 @@
     <string name="action_settings" msgid="1329008122345201684">"Nastavení"</string>
     <string name="sendButtonContentDescription" msgid="8422114979691093956">"Odeslat zprávu"</string>
     <string name="attachMediaButtonContentDescription" msgid="2758624209216276682">"Přidat přílohu"</string>
-    <string name="help_and_feedback_activity_label" msgid="8070710971014835182">"Nápověda"</string>
-    <string name="welcome" msgid="2857560951820802321">"Vítejte"</string>
-    <string name="skip" msgid="7238879696319945853">"Přeskočit"</string>
     <string name="next_with_arrow" msgid="2840729397885031655">"Další &gt;"</string>
     <string name="next" msgid="4496962051601713843">"Další"</string>
     <string name="exit" msgid="1905187380359981199">"Ukončit"</string>
@@ -88,7 +85,6 @@
     </plurals>
     <string name="class_0_message_activity" msgid="4603850264073169854">"Zpráva třídy 0"</string>
     <string name="save" msgid="5081141452059463572">"Uložit"</string>
-    <string name="sms_storage_low_auto_delete_enabled_dialog_text" msgid="8836401937872068406">"V zařízení dochází místo. Aplikace SMS a MMS automaticky smaže starší zprávy, aby uvolnila místo."</string>
     <string name="sms_storage_low_title" msgid="7985379565293259177">"V úložišti je málo místa"</string>
     <string name="sms_storage_low_text" msgid="7036247475855447830">"Aplikace SMS a MMS nebude moci posílat ani přijímat zprávy, dokud v zařízení nebude k dispozici více místa."</string>
     <string name="sms_storage_low_notification_ticker" msgid="2393739822170029830">"Dochází volné místo na zprávy SMS. Možná bude potřeba nějaké zprávy vymazat."</string>
@@ -97,7 +93,6 @@
     <string name="enter_phone_number_hint" msgid="6242965213882272822">"Telefonní číslo"</string>
     <string name="delete_all_media" msgid="5549693176734564386">"Smazat všechny zprávy s médii"</string>
     <string name="delete_oldest_messages" msgid="9204277306804390707">"Smazat zprávy starší než <xliff:g id="DURATION">%s</xliff:g>"</string>
-    <string name="auto_delete_oldest_messages" msgid="7766679943833404968">"Automaticky smazat zprávy starší než <xliff:g id="DURATION">%s</xliff:g>"</string>
     <string name="ignore" msgid="7063392681130898793">"Ignorovat"</string>
     <string name="delete_all_media_confirmation" msgid="4601960420953525559">"Vymazat všechny zprávy s médii?"</string>
     <string name="delete_oldest_messages_confirmation" msgid="6172297718425265784">"Smazat zprávy starší než <xliff:g id="DURATION">%s</xliff:g>?"</string>
@@ -111,7 +106,6 @@
     <string name="message_status_send_retrying" msgid="650840088043267981">"Zpráva nebyla odeslána. Probíhá další pokus…"</string>
     <string name="message_status_resend" msgid="7718458416521355708">"Znovu odeslat nebo smazat"</string>
     <string name="message_status_send_failed_emergency_number" msgid="1738854184297159948">"Uskutečněte prosím hlasové volání nouzových služeb. Vaši textovou zprávu v současné době nebylo možné doručit."</string>
-    <string name="message_status_failed" msgid="8009695010381848311">"Nezdařilo se"</string>
     <string name="message_title_manual_download" msgid="2761223322277801061">"Nová zpráva MMS ke stažení"</string>
     <string name="message_title_downloading" msgid="6418481644146460124">"Nová zpráva MMS"</string>
     <string name="message_title_download_failed" msgid="3867223594671090459">"Stažení se nezdařilo."</string>
@@ -121,15 +115,8 @@
     <string name="message_status_downloading" msgid="7159807805159805428">"Stahování…"</string>
     <string name="message_status_download_error" msgid="6957738686287397519">"Platnost zprávy vypršela nebo zpráva není k dispozici."</string>
     <string name="mms_info" msgid="3402311750134118165">"velikost: <xliff:g id="MESSAGESIZE">%1$s</xliff:g>, vypršení platnosti: <xliff:g id="MESSAGEEXPIRE">%2$s</xliff:g>"</string>
-    <string name="invalid_destination" msgid="8214889988397524630">"Zprávu nelze odeslat. Příjemce není platný."</string>
-    <string name="service_not_activated" msgid="5512558652052977817">"Služba není v síti aktivována."</string>
-    <string name="service_network_problem" msgid="3765738916704013318">"Zprávu se nepodařilo odeslat z důvodu chyby v síti."</string>
-    <string name="service_message_not_found" msgid="8350935323904134751">"Platnost zprávy vypršela nebo zpráva není k dispozici."</string>
-    <string name="no_subject" msgid="5587715902648568767">"(Bez předmětu)"</string>
     <string name="unknown_sender" msgid="504272434917395677">"Neznámý odesílatel"</string>
     <string name="delivered_status_content_description" msgid="3433965196058436991">"Doručeno"</string>
-    <string name="dl_failure_notification" msgid="8744588243554006189">"Stažení zprávy <xliff:g id="SUBJECT">%1$s</xliff:g> od odesílatele <xliff:g id="FROM">%2$s</xliff:g> se nezdařilo."</string>
-    <string name="low_memory" msgid="5300743415198486619">"Databázovou operaci se nepodařilo dokončit z důvodu nedostatku paměti."</string>
     <string name="notification_send_failures_line1_singular" msgid="6783835440207655217">"Zprávu se nepodařilo odeslat."</string>
     <string name="notification_send_failures_line1_plural" msgid="7228944748028969272">"Několik zpráv v aplikaci SMS a MMS nebylo odesláno."</string>
     <plurals name="notification_send_failures" formatted="false" msgid="6938919932879650691">
@@ -154,7 +141,6 @@
       <item quantity="other"><xliff:g id="MESSAGES">%d</xliff:g> nových zpráv</item>
       <item quantity="one">Nová zpráva</item>
     </plurals>
-    <string name="start_conversation" msgid="7984539515326392793">"Spustit"</string>
     <string name="camera_error_opening" msgid="2739332294400420426">"Fotoaparát není k dispozici"</string>
     <string name="camera_error_unknown" msgid="4283956364220459608">"Fotoaparát není k dispozici."</string>
     <string name="camera_error_video_init_fail" msgid="994632067015578879">"Záznam videa není k dispozici."</string>
@@ -165,8 +151,6 @@
     <string name="action_delete" msgid="4076795795307486019">"Smazat"</string>
     <string name="action_archive" msgid="5437034800324083170">"Archivovat"</string>
     <string name="action_unarchive" msgid="139681611159869493">"Vyjmout z archivu"</string>
-    <string name="action_notification_off" msgid="4823658797441716246">"Vypnout oznámení"</string>
-    <string name="action_notification_on" msgid="8244389452685364211">"Zapnout oznámení"</string>
     <string name="action_add_contact" msgid="8248615862739848672">"Přidat kontakt"</string>
     <string name="action_download" msgid="7786338136368564146">"Stáhnout"</string>
     <string name="action_send" msgid="377635240181672039">"Odeslat"</string>
@@ -213,8 +197,6 @@
     <string name="unblocked_toast_message" msgid="4927617874263586622">"Kontakt byl odblokován a jeho archivace byla zrušena"</string>
     <string name="archived_toast_message" msgid="8109348891515322512">"Archivováno: <xliff:g id="COUNT">%d</xliff:g>"</string>
     <string name="unarchived_toast_message" msgid="5010777423084203833">"Vyjmuto z archivu: <xliff:g id="COUNT">%d</xliff:g>"</string>
-    <string name="notification_off_toast_message" msgid="5203458459139408265">"Oznámení jsou vypnuta"</string>
-    <string name="notification_on_toast_message" msgid="1240626023754746310">"Oznámení jsou zapnuta"</string>
     <string name="toast_after_setting_default_sms_app_for_message_send" msgid="2767997591700713113">"Vše je připraveno. Znovu klepněte na Odeslat."</string>
     <string name="toast_after_setting_default_sms_app" msgid="2923745971897322476">"Aplikace SMS a MMS byla úspěšně nastavena jako výchozí aplikace pro SMS."</string>
     <plurals name="attachment_preview_close_content_description" formatted="false" msgid="5631719319690969981">
@@ -240,7 +222,6 @@
     <string name="group_outgoing_failed_message_prefix" msgid="5059983340377901592">"Neúspěšná zpráva pro uživatele <xliff:g id="GROUP">%1$s</xliff:g>: <xliff:g id="MESSAGE">%2$s</xliff:g>. Čas: <xliff:g id="TIME">%3$s</xliff:g>."</string>
     <string name="group_outgoing_successful_message_prefix" msgid="1593702642852987920">"Zpráva pro uživatele <xliff:g id="GROUP">%1$s</xliff:g>: <xliff:g id="MESSAGE">%2$s</xliff:g>. Čas: <xliff:g id="TIME">%3$s</xliff:g>."</string>
     <string name="failed_message_content_description" msgid="7047161648867054936">"Neúspěšná zpráva. Klepnutím pokus opakujte."</string>
-    <string name="group_conversation_description" msgid="2339270924401184182">"Konverzace s uživateli <xliff:g id="PARTICIPANTS">%s</xliff:g>"</string>
     <string name="delete_subject_content_description" msgid="8910749398836396698">"Smazat předmět"</string>
     <string name="camera_switch_to_video_mode" msgid="2926868205952641428">"Natočit video"</string>
     <string name="camera_switch_to_still_mode" msgid="4419617715199157958">"Pořídit statický snímek"</string>
@@ -290,15 +271,10 @@
     <string name="attachment_file_description" msgid="3056972820372291694">"Příloha MMS byla uložena"</string>
     <string name="settings_activity_title" msgid="3380813834835334258">"Nastavení"</string>
     <string name="archived_activity_title" msgid="4738212324460451188">"Archivováno"</string>
-    <string name="action_close" msgid="1840519376200478419">"Zavřít"</string>
     <string name="mms_messaging_category_pref_title" msgid="4816815152658525660">"MMS"</string>
     <string name="advanced_category_pref_title" msgid="6411454224069259687">"Rozšířená nastavení"</string>
     <string name="debug_category_pref_title" msgid="8765138968242505061">"Ladit"</string>
     <string name="notifications_pref_title" msgid="4127288731844373795">"Oznámení"</string>
-    <string name="notification_sound_pref_title" msgid="3685506528957337849">"Zvuk"</string>
-    <string name="silent_ringtone" msgid="8073534180322059814">"Tichý režim"</string>
-    <string name="notification_vibrate_pref_title" msgid="6668564570045187390">"Vibrace"</string>
-    <string name="blocked_pref_title" msgid="2560554234438548817">"Zablokováno"</string>
     <string name="delivery_reports_pref_title" msgid="5115727259825309087">"Zprávy o doručení SMS"</string>
     <string name="delivery_reports_pref_summary" msgid="4272502420621500421">"U každé odeslané SMS požadovat potvrzení o doručení"</string>
     <string name="auto_retrieve_mms_pref_title" msgid="1316094876978218980">"Automatické načítání"</string>
@@ -306,7 +282,6 @@
     <string name="auto_retrieve_mms_when_roaming_pref_title" msgid="2918775628609759349">"Autom. načítání při roamingu"</string>
     <string name="auto_retrieve_mms_when_roaming_pref_summary" msgid="7347177867673486983">"Při roamingu automaticky načítat zprávy MMS"</string>
     <string name="group_mms_pref_title" msgid="6553612309209383106">"Skupinové zprávy"</string>
-    <string name="group_mms_pref_summary" msgid="3758710015912690629">"Použít MMS k odeslání jedné zprávy, pokud má několik příjemců"</string>
     <string name="sms_disabled_pref_title" msgid="6352764741524717132">"Výchozí aplikace SMS"</string>
     <string name="sms_enabled_pref_title" msgid="2961457081888153323">"Výchozí aplikace SMS"</string>
     <!-- no translation found for default_sms_app (3907546126124760465) -->
@@ -319,10 +294,8 @@
     <string name="dump_mms_pref_title" msgid="6699074152055891680">"Vypsání zpráv MMS"</string>
     <string name="dump_mms_pref_summary" msgid="7901698352188687659">"Vypsat nezpracovaná data přijatých zpráv MMS do souboru externího úložiště"</string>
     <string name="wireless_alerts_title" msgid="8218925605166939654">"Bezdrátová upozornění"</string>
-    <string name="message_context_menu_title" msgid="5036023289586457642">"Možnosti zprávy"</string>
     <string name="message_context_menu_copy_text" msgid="8241684826917957666">"Kopírovat text"</string>
     <string name="message_context_menu_view_details" msgid="2077089491219912840">"Zobrazit podrobnosti"</string>
-    <string name="message_context_menu_delete_message" msgid="4924354182554857475">"Smazat"</string>
     <string name="message_context_menu_forward_message" msgid="4848326950037554575">"Přeposlat"</string>
     <string name="message_details_title" msgid="8451487656255395372">"Podrobnosti zprávy"</string>
     <string name="message_type_label" msgid="6442873901113487978">"Typ: "</string>
@@ -342,7 +315,6 @@
     <string name="sim_slot_identifier" msgid="5934005977415016295">"SIM karta <xliff:g id="SIM_SLOT_NUMBER">%s</xliff:g>"</string>
     <string name="hidden_sender_address" msgid="5054789216911282696">"Skrytá adresa odesílatele"</string>
     <string name="cant_send_message_while_loading_attachments" msgid="4301887223941009907">"Při načítání příloh nelze odeslat zprávu."</string>
-    <string name="fail_to_load_attachment" msgid="412233184776827353">"Přílohu nelze načíst. Zkuste to znovu."</string>
     <string name="cant_send_message_without_active_subscription" msgid="7130532514190813716">"Síť není připravena. Zkuste to znovu."</string>
     <string name="chips_text_delete_button_content_description" msgid="123760854728616068">"Smazat text"</string>
     <string name="numeric_text_keyboard_toggle_button_content_description" msgid="1403198418131594073">"Přepnutí mezi zadáváním textu a čísel"</string>
@@ -395,14 +367,9 @@
       <item quantity="other"><xliff:g id="ATTACHMENT_COUNT">%d</xliff:g> příloh je připraveno k odeslání</item>
       <item quantity="one">Jedna příloha je připravena k odeslání</item>
     </plurals>
-    <string name="menu_send_feedback" msgid="479412726781330278">"Odeslat zpětnou vazbu"</string>
-    <string name="menu_view_in_store" msgid="3792488955421628684">"Zobrazit v Obchodě Google Play"</string>
-    <string name="menu_version_info" msgid="6122616816253404821">"Informace o verzi"</string>
-    <string name="subtitle_format_for_version_number" msgid="446082111129170749">"Verze %1$s"</string>
     <string name="menu_license" msgid="1157954180701135202">"Licence open source"</string>
     <string name="notifications_enabled_conversation_pref_title" msgid="1492686092760478206">"Oznámení"</string>
     <string name="mms_attachment_limit_reached" msgid="8303890455085643301">"Byl dosažen maximální počet příloh"</string>
-    <string name="mms_attachment_load_failed" msgid="5697191348996648727">"Načtení přílohy se nezdařilo."</string>
     <string name="add_contact_confirmation_dialog_title" msgid="1898307408816625598">"Přidat do kontaktů?"</string>
     <string name="add_contact_confirmation" msgid="1479380805406328264">"Přidat kontakt"</string>
     <string name="compose_message_view_subject_hint_text" msgid="6076616675845705660">"Předmět"</string>
@@ -421,14 +388,12 @@
     <string name="vcard_detail_birthday_label" msgid="7196021537629120021">"Narozeniny"</string>
     <string name="vcard_detail_notes_label" msgid="6104179009509800126">"Poznámky"</string>
     <string name="forward_message_activity_title" msgid="4689730643900226699">"Přeposlat zprávu"</string>
-    <string name="reply_activity_title" msgid="2967630094609648609">"Odpovědět"</string>
     <string name="plus_one" msgid="9010288417554932581">"+1"</string>
     <string name="plus_n" msgid="8961547034116059566">"+%d"</string>
     <string name="sms_disabled" msgid="4988773371061820432">"Zprávy SMS jsou zakázány"</string>
     <string name="requires_default_sms_app_to_send" msgid="171048611973157166">"Chcete-li odeslat zprávu, nastavte aplikaci SMS a MMS jako výchozí aplikaci pro SMS."</string>
     <string name="requires_default_sms_app" msgid="7477365167876194810">"Nastavte aplikaci SMS a MMS jako výchozí aplikaci pro SMS."</string>
     <string name="requires_default_sms_change_button" msgid="6717443481161057941">"Změnit"</string>
-    <string name="recommend_set_default_sms_app" msgid="7769636305626277844">"Chcete-li dostávat zprávy, nastavte aplikaci SMS a MMS jako výchozí aplikaci pro SMS."</string>
     <string name="no_preferred_sim_selected" msgid="8583927728936521140">"Není vybrána preferovaná SIM karta pro odesílání zpráv SMS."</string>
     <string name="requires_sms_permissions_message" msgid="2179684358095980506">"Tuto aplikaci vlastník zařízení nepovolil."</string>
     <string name="requires_sms_permissions_close_button" msgid="8601569832171759435">"OK"</string>
@@ -440,8 +405,6 @@
       <item quantity="one">Neplatný kontakt</item>
     </plurals>
     <string name="camera_media_failure" msgid="6532763214546593687">"Obraz z fotoaparátu nelze načíst."</string>
-    <string name="conversation_list_item_view_sent_from_you_prefix" msgid="1735457801737604211">"Vy: "</string>
-    <string name="conversation_list_item_view_sent_from_other_prefix" msgid="9202622757034736175">"<xliff:g id="FIRSTNAMEOFSENDER">%s</xliff:g>: "</string>
     <string name="conversation_list_item_view_draft_message" msgid="3592923997082845035">"Koncept"</string>
     <string name="conversation_list_empty_text" msgid="7505706551294769667">"Zde budou uvedeny nové konverzace"</string>
     <string name="archived_conversation_list_empty_text" msgid="6109126963298874571">"Zde se zobrazují archivované konverzace."</string>
@@ -461,8 +424,6 @@
     <string name="block_confirmation_message" msgid="185429978461824228">"Zprávy z tohoto čísla budete i nadále dostávat, ale nebude se pro ně již zobrazovat oznámení. Tato konverzace bude archivována."</string>
     <string name="blocked_contacts_title" msgid="7709164518967312281">"Blokované kontakty"</string>
     <string name="tap_to_unblock_message" msgid="1284284144816901647">"ODBLOKOVAT"</string>
-    <string name="view_blocked_contacts_title" msgid="7417596291306885403">"Blokované kontakty"</string>
-    <string name="pick_image_from_document_library_content_description" msgid="132845956503874378">"Vyberte obrázek z knihovny dokumentů."</string>
     <string name="sending_message" msgid="6363584950085384929">"Odesílání zprávy"</string>
     <string name="send_message_success" msgid="4088006261869323324">"Zpráva byla odeslána"</string>
     <string name="send_message_failure_no_data" msgid="7404080465234559802">"Mobilní datové přenosy jsou vypnuty. Zkontrolujte svá nastavení."</string>
@@ -501,19 +462,16 @@
     <string name="apn_edit" msgid="2134993966166435648">"Upravit přístupový bod"</string>
     <string name="apn_not_set" msgid="463728018542184151">"Nenastaveno"</string>
     <string name="apn_name" msgid="1572691851070894985">"Název"</string>
-    <string name="apn_apn" msgid="1197541953189716999">"Název přístupového bodu (APN)"</string>
     <string name="apn_mmsc" msgid="2584154739440281747">"MMSC"</string>
     <string name="apn_mms_proxy" msgid="4343743931563107100">"Proxy server pro MMS"</string>
     <string name="apn_mms_port" msgid="6181253508404620479">"Port pro MMS"</string>
     <string name="apn_mcc" msgid="8102023058623950736">"MCC"</string>
     <string name="apn_mnc" msgid="1372437523197012866">"MNC"</string>
-    <string name="apn_type" msgid="8409755622399386584">"Typ APN"</string>
     <string name="menu_delete_apn" msgid="4947391038600888284">"Smazat APN"</string>
     <string name="menu_new_apn" msgid="1564461309350814037">"Nový název přístupového bodu (APN)"</string>
     <string name="menu_save_apn" msgid="5445335896951613691">"Uložit"</string>
     <string name="menu_discard_apn_change" msgid="310569150407968648">"Zahodit"</string>
     <string name="error_apn_name_empty" msgid="7770363665690646716">"Pole Název nesmí být prázdné."</string>
-    <string name="error_apn_empty" msgid="6799644880052534839">"Název přístupového bodu (APN) nesmí být prázdný."</string>
     <string name="error_mcc_not3" msgid="3693788817630985838">"Pole MCC musí obsahovat alespoň 3 číslice."</string>
     <string name="error_mnc_not23" msgid="3726130455168743554">"Pole MNC musí obsahovat 2 nebo 3 číslice."</string>
     <string name="restore_default_apn" msgid="7180447255249638396">"Obnovování výchozích nastavení (APN)"</string>
@@ -522,7 +480,6 @@
     <string name="untitled_apn" msgid="3110576506102839465">"Bez názvu"</string>
     <string name="sms_apns_title" msgid="1351513141821300879">"Názvy přístupových bodů"</string>
     <string name="apn_settings" msgid="3179955111000379490">"Názvy přístupových bodů (APN)"</string>
-    <string name="menu_new" msgid="8286285392706532511">"Nový název přístupového bodu (APN)"</string>
     <string name="apn_settings_not_available" msgid="5136389328322585717">"Nastavení názvu přístupového budu pro tohoto uživatele není dostupné."</string>
     <string name="copy_to_clipboard_dialog_title" msgid="494269163973708182">"Kopírovat do schránky?"</string>
     <string name="copy_to_clipboard" msgid="1977083934277981786">"Kopírovat"</string>
@@ -542,18 +499,7 @@
     <string name="send_button_long_click_description_no_sim_selector" msgid="979624100711380593">"Upravit předmět"</string>
     <string name="send_button_long_click_description_with_sim_selector" msgid="7670274457707760465">"Vybrat SIM kartu nebo upravit předmět"</string>
     <string name="audio_record_view_content_description" msgid="29401157183728655">"Zvuk zaznamenáte klepnutím a podržením"</string>
-    <string name="widget_new_conversation_content_description" msgid="4214201569175733579">"Zahájit novou konverzaci"</string>
-    <string name="widget_title_content_description" msgid="5802836840910466231">"SMS a MMS"</string>
-    <string name="widget_conversation_list_name" msgid="4005037639000611925">"Seznam SMS a MMS"</string>
-    <string name="widget_conversation_name" msgid="3900606239571892871">"SMS a MMS"</string>
-    <string name="widget_new_message_content_description" msgid="2706347689522691188">"Nová zpráva"</string>
-    <string name="widget_conversation_list_content_description" msgid="4137121313374868821">"Seznam konverzací"</string>
-    <string name="loading_conversations" msgid="2890879017729068514">"Načítání konverzací"</string>
-    <string name="loading_messages" msgid="3894765818932489665">"Načítání zpráv"</string>
-    <string name="view_more_conversations" msgid="2430542054023217740">"Zobrazit další konverzace"</string>
-    <string name="view_more_messages" msgid="6463224009407336178">"Zobrazit další zprávy"</string>
     <string name="conversation_deleted" msgid="6088388615460305424">"Konverzace byla smazána"</string>
-    <string name="tap_to_configure" msgid="7591682335533041774">"Konverzace byla smazána. Klepnutím zobrazíte jinou konverzaci v aplikaci SMS a MMS."</string>
     <string name="update_destination_blocked" msgid="4577227174205233981">"Zablokováno"</string>
     <string name="update_destination_unblocked" msgid="5369499874676600478">"Odblokováno"</string>
     <string name="db_full" msgid="8459265782521418031">"V úložišti je málo místa. Některá data mohou být ztracena."</string>

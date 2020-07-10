@@ -21,9 +21,6 @@
     <string name="action_settings">Axustes</string>
     <string name="sendButtonContentDescription">Unvia\'l mensaxe</string>
     <string name="attachMediaButtonContentDescription">Amiesta un axuntu</string>
-    <string name="help_and_feedback_activity_label">Ayuda</string>
-    <string name="welcome">Afáyate</string>
-    <string name="skip">Saltar</string>
     <string name="next_with_arrow">Siguiente &gt;</string>
     <string name="next">Siguiente</string>
     <string name="exit">Colar</string>
@@ -73,7 +70,6 @@
     </plurals>
     <string name="class_0_message_activity">Mensaxe clas 0</string>
     <string name="save">Guardar</string>
-    <string name="sms_storage_low_auto_delete_enabled_dialog_text">El preséu tien pocu espaciu d\'almacenamientu. El Centru de Mensaxes va desaniciar automáticamente los mensaxes vieyos pa lliberar espaciu.</string>
     <string name="sms_storage_low_title">Ta escosando l\'almacenamientu</string>
     <string name="sms_storage_low_text">Ye dable que\'l Centru de Mensaxes nun unvie nin reciba mensaxes hasta que se llibere más espaciu nel preséu.</string>
     <string name="sms_storage_low_notification_ticker">Pocu espaciu pa SMS. Seique tengas que desaniciar mensaxes.</string>
@@ -82,7 +78,6 @@
     <string name="enter_phone_number_hint">Númberu telefónicu</string>
     <string name="delete_all_media">Desaniciar tolos mensaxes con conteníu multimedia</string>
     <string name="delete_oldest_messages">Desaniciar mensaxes de más de <xliff:g id="duration">%s</xliff:g></string>
-    <string name="auto_delete_oldest_messages">Desaniciar automáticamente mensaxes de más de <xliff:g id="duration">%s</xliff:g></string>
     <string name="ignore">Inorar</string>
     <string name="delete_all_media_confirmation">¿Desaniciar tolos mensaxes multimedia?</string>
     <string name="delete_oldest_messages_confirmation">¿Desaniciar mensaxes de más de <xliff:g id="duration">%s</xliff:g>?</string>
@@ -94,7 +89,6 @@
     <string name="message_status_send_failed">Nun s\'unvió. Toca pa tentalo de nueves.</string>
     <string name="message_status_resend">Reunviar o desaniciar</string>
     <string name="message_status_send_failed_emergency_number">Por favor, fai una llamada de voz a los servicios d\'emerxencia. Nun pudo unviase\'l mensaxe de testu esta vegada.</string>
-    <string name="message_status_failed">Fallu</string>
     <string name="message_title_manual_download">Mensaxe MMS nuevu pa baxar</string>
     <string name="message_title_downloading">Mensaxe nuevu MMS</string>
     <string name="message_title_download_failed">Nun pudo descargase</string>
@@ -103,15 +97,8 @@
     <string name="message_status_download_action">Descargar o desaniciar</string>
     <string name="message_status_download_error">El mensaxe venció o nun ta disponible</string>
     <string name="mms_info">tamañu: <xliff:g id="Messagesize">%1$s</xliff:g>; vencimientu: <xliff:g id="Messageexpire">%2$s</xliff:g></string>
-    <string name="invalid_destination">Nun pue unviase porque\'l destinatariu nun ye válidu.</string>
-    <string name="service_not_activated">Nun s\'activó\'l serviciu na rede</string>
-    <string name="service_network_problem">Nun pudo unviase pola mor d\'un problea de rede</string>
-    <string name="service_message_not_found">El mensaxe caducó o nun ta disponible</string>
-    <string name="no_subject">(Nun hai asuntu)</string>
     <string name="unknown_sender">Remitente desconocíu</string>
     <string name="delivered_status_content_description">Entregóse</string>
-    <string name="dl_failure_notification">Nun pudo baxase\'l mensaxe <xliff:g id="subject">%1$s</xliff:g> de <xliff:g id="from">%2$s</xliff:g>.</string>
-    <string name="low_memory">Nun pudo completase la operación de la base de datos pola mor de memoria baxa</string>
     <string name="notification_send_failures_line1_singular">Nun s\'unvió\'l mensaxe</string>
     <string name="notification_send_failures_line1_plural">Nun s\'unviaron dellos mensaxes en Mensaxería</string>
     <plurals name="notification_send_failures">
@@ -132,7 +119,6 @@
         <item quantity="one">Mensaxe nuevu</item>
         <item quantity="other"><xliff:g id="messages">%d</xliff:g> mensaxes nuevos</item>
     </plurals>
-    <string name="start_conversation">Aniciar</string>
     <string name="camera_error_opening">Cámara non disponible</string>
     <string name="camera_error_unknown">Cámara non disponible</string>
     <string name="camera_error_video_init_fail">Captura de videu non disponible</string>
@@ -185,8 +171,6 @@
     <string name="unblocked_toast_message">Contautu desbloquiáu y ensin archivar</string>
     <string name="archived_toast_message"><xliff:g id="count">%d</xliff:g> archivaes</string>
     <string name="unarchived_toast_message"><xliff:g id="count">%d</xliff:g> non archivaes</string>
-    <string name="notification_off_toast_message">Desactiváronse los avisos</string>
-    <string name="notification_on_toast_message">Activáronse los avisos</string>
     <string name="toast_after_setting_default_sms_app_for_message_send">Too afitao. Calca de nueves Unviar.</string>
     <string name="toast_after_setting_default_sms_app">La mensaxería afitóse correcho como l\'app de SMS predeterminada.</string>
     <plurals name="attachment_preview_close_content_description">
@@ -197,7 +181,6 @@
     <string name="audio_play_content_description">Reproducir axuntu d\'audio</string>
     <string name="audio_pause_content_description">Pausa</string>
     <string name="failed_message_content_description">Fallu al unviar el mensaxe. Calca pa retentar.</string>
-    <string name="group_conversation_description">Conversación con <xliff:g id="participants">%s</xliff:g></string>
     <string name="delete_subject_content_description">Desaniciar asuntu</string>
     <string name="camera_switch_to_video_mode">Capturar videu</string>
     <string name="camera_switch_to_still_mode">Capturar una imaxe fixa</string>
@@ -235,13 +218,10 @@
     <string name="attachment_file_description">Guardáu MMS axuntu</string>
     <string name="settings_activity_title">Axustes</string>
     <string name="archived_activity_title">Archivada</string>
-    <string name="action_close">Zarrar</string>
     <string name="mms_messaging_category_pref_title">MMS</string>
     <string name="advanced_category_pref_title">Avanzao</string>
     <string name="debug_category_pref_title">Depurar</string>
     <string name="notifications_pref_title">Avisos</string>
-    <string name="silent_ringtone">Silenciu</string>
-    <string name="blocked_pref_title">Bloquiáu</string>
     <string name="delivery_reports_pref_title">Informes d\'entrega de SMS</string>
     <string name="delivery_reports_pref_summary">Solicitar un informe d\'entrega al unviar un SMS</string>
     <string name="auto_retrieve_mms_pref_title">Recuperación automática</string>
@@ -249,7 +229,6 @@
     <string name="auto_retrieve_mms_when_roaming_pref_title">Recuperación automática en roaming</string>
     <string name="auto_retrieve_mms_when_roaming_pref_summary">Recuperar MMS automáticamente en roaming</string>
     <string name="group_mms_pref_title">Mensaxes grupales</string>
-    <string name="group_mms_pref_summary">Usa MMS pa unviar un mesmu mensaxe a dellos destinatarios</string>
     <string name="sms_disabled_pref_title">App de SMS predeterminada</string>
     <string name="sms_enabled_pref_title">App de SMS predeterminada</string>
     <string name="default_sms_app"><xliff:g id="app_name">%s</xliff:g></string>
@@ -261,10 +240,8 @@
     <string name="dump_mms_pref_title">Volcar MMS</string>
     <string name="dump_mms_pref_summary">Volcar datos ensin procesar de MMS recibíos nun ficheru d\'almacenamientu esternu</string>
     <string name="wireless_alerts_title">Alertes inalámbriques</string>
-    <string name="message_context_menu_title">Opciones de mensaxe</string>
     <string name="message_context_menu_copy_text">Copiar el testu</string>
     <string name="message_context_menu_view_details">Ver detalles</string>
-    <string name="message_context_menu_delete_message">Desaniciar</string>
     <string name="message_context_menu_forward_message">Reunviar</string>
     <string name="message_details_title">Detalles del mensaxe</string>
     <string name="message_type_label">Tipu:\u0020</string>
@@ -284,7 +261,6 @@
     <string name="sim_slot_identifier">SIM <xliff:g id="sim_slot_number">%s</xliff:g></string>
     <string name="hidden_sender_address">Direición de remitente tapecida</string>
     <string name="cant_send_message_while_loading_attachments">Nun pue unviase\'l mensaxe entrín se cargaben los axuntos.</string>
-    <string name="fail_to_load_attachment">Nun pue cargase l\'axuntu. Vuelvi intentalo.</string>
     <string name="cant_send_message_without_active_subscription">La rede nun ta llista. Vuelvi intentalo.</string>
     <string name="chips_text_delete_button_content_description">Desaniciar testu</string>
     <string name="numeric_text_keyboard_toggle_button_content_description">Camudar ente ingresar testu y númberos</string>
@@ -325,14 +301,9 @@
         <item quantity="one">Un axuntu preparáu pa unviar</item>
         <item quantity="other">Un axuntu preparáu pa unviar</item>
     </plurals>
-    <string name="menu_send_feedback">Unviar feedback</string>
-    <string name="menu_view_in_store">Ver na Google Play Store</string>
-    <string name="menu_version_info">Información de versión</string>
-    <string name="subtitle_format_for_version_number">Versión %1$s</string>
     <string name="menu_license">Llicencies de códigu abiertu</string>
     <string name="notifications_enabled_conversation_pref_title">Avisos</string>
     <string name="mms_attachment_limit_reached">Algamóse la llende d\'axuntos</string>
-    <string name="mms_attachment_load_failed">Fallu al cargar l\'axuntu.</string>
     <string name="add_contact_confirmation_dialog_title">¿Amestar a Contautos?</string>
     <string name="add_contact_confirmation">Amestar contautu</string>
     <string name="compose_message_view_subject_hint_text">Asuntu</string>
@@ -348,14 +319,12 @@
     <string name="vcard_detail_birthday_label">Aniversariu</string>
     <string name="vcard_detail_notes_label">Notes</string>
     <string name="forward_message_activity_title">Reunviar mensaxe</string>
-    <string name="reply_activity_title">Responder</string>
     <string name="plus_one">+1</string>
     <string name="plus_n">+%d</string>
     <string name="sms_disabled">SMS inhabilitaos</string>
     <string name="requires_default_sms_app_to_send">Pa unviar mensaxes, afita Mensaxes como l\'aplicación SMS por defeutu</string>
     <string name="requires_default_sms_app">Afitar Mensaxes como l\'aplicación de SMS por defeutu</string>
     <string name="requires_default_sms_change_button">Camudar</string>
-    <string name="recommend_set_default_sms_app">Pa recibir mensaxes, afita Mensaxes como l\'aplicación SMS por defeutu</string>
     <string name="no_preferred_sim_selected">Nun hai SIM escoyida como preferida pa unviar mensaxes SMS</string>
     <string name="requires_sms_permissions_message">Esta aplicación nun tien el permisu\'l dueñu\'l preséu.</string>
     <string name="requires_sms_permissions_close_button">ACEUTAR</string>
@@ -365,8 +334,6 @@
         <item quantity="other">Contautos non válidos</item>
     </plurals>
     <string name="camera_media_failure">Nun pudo cargase la imaxe de la cámara</string>
-    <string name="conversation_list_item_view_sent_from_you_prefix">Tú:\u0020</string>
-    <string name="conversation_list_item_view_sent_from_other_prefix"><xliff:g id="firstNameOfSender">%s</xliff:g>:\u0020</string>
     <string name="conversation_list_item_view_draft_message">Borrador</string>
     <string name="conversation_list_empty_text">Namái qu\'anicies una conversación nueva, verásla llistada equí</string>
     <string name="archived_conversation_list_empty_text">Equí apaecerán les conversaciones archivaes</string>
@@ -385,8 +352,6 @@
     <string name="block_confirmation_message">Siguirás recibiendo mensaxes d\'esti númberu pero yá nun se t\'avisará. Esta conversación archivaráse.</string>
     <string name="blocked_contacts_title">Contautos bloquiaos</string>
     <string name="tap_to_unblock_message">DESBLOQUIAR</string>
-    <string name="view_blocked_contacts_title">Contautos bloquiaos</string>
-    <string name="pick_image_from_document_library_content_description">Escueyi una imaxe de la biblioteca de documentos</string>
     <string name="sending_message">Unviando mensaxe</string>
     <string name="send_message_success">Unvióse\'l mensaxe</string>
     <string name="send_message_failure_no_data">El móvil ta apagáu. Revisa la to configuración.</string>
@@ -425,19 +390,16 @@
     <string name="apn_edit">Editar puntu d\'accesu</string>
     <string name="apn_not_set">Nun s\'afitó</string>
     <string name="apn_name">Nome</string>
-    <string name="apn_apn">APN</string>
     <string name="apn_mmsc">MMSC</string>
     <string name="apn_mms_proxy">Proxy MMS</string>
     <string name="apn_mms_port">Puertu MMS</string>
     <string name="apn_mcc">MCC</string>
     <string name="apn_mnc">MNC</string>
-    <string name="apn_type">Triba d\'APN</string>
     <string name="menu_delete_apn">Desaniciar APN</string>
     <string name="menu_new_apn">APN nueva</string>
     <string name="menu_save_apn">Guardar</string>
     <string name="menu_discard_apn_change">Escartar</string>
     <string name="error_apn_name_empty">El campu Nome nun pue tar baleru.</string>
-    <string name="error_apn_empty">L\'APN nun pue tar balera.</string>
     <string name="error_mcc_not3">El campu MMC ha ser de 3 díxitos.</string>
     <string name="error_mnc_not23">El campu MMC ha ser de 2 ó 3 díxitos.</string>
     <string name="restore_default_apn">Restaurando la configuración de APN predeterminada.</string>
@@ -446,7 +408,6 @@
     <string name="untitled_apn">Ensin títulu</string>
     <string name="sms_apns_title">Nomes de puntu d\'accesu</string>
     <string name="apn_settings">APNs</string>
-    <string name="menu_new">APN Nuevu</string>
     <string name="apn_settings_not_available">Los axustes del nome del puntu d\'accesu nun tán disponibles pa esti usuariu</string>
     <string name="copy_to_clipboard_dialog_title">¿Copiar al cartafueyu?</string>
     <string name="copy_to_clipboard">Copiar</string>
@@ -466,18 +427,7 @@
     <string name="send_button_long_click_description_no_sim_selector">Editar asuntu</string>
     <string name="send_button_long_click_description_with_sim_selector">Esbillar SIM o editar asuntu</string>
     <string name="audio_record_view_content_description">Ten &amp; primío pa grabar audiu</string>
-    <string name="widget_new_conversation_content_description">Entamar una conversación nueva</string>
-    <string name="widget_title_content_description">Mensaxería</string>
-    <string name="widget_conversation_list_name">Llistáu de mensaxes</string>
-    <string name="widget_conversation_name">Mensaxería</string>
-    <string name="widget_new_message_content_description">Mensaxe nuevu</string>
-    <string name="widget_conversation_list_content_description">Llista de conversaciones</string>
-    <string name="loading_conversations">Cargando conversaciones</string>
-    <string name="loading_messages">Cargando mensaxes</string>
-    <string name="view_more_conversations">Ver más conversaciones</string>
-    <string name="view_more_messages">Ver más mensaxes</string>
     <string name="conversation_deleted">Conversación desaniciada</string>
-    <string name="tap_to_configure">Desanicióse la conversación. Calca p\'amosar una conversación diferente de Mensaxes</string>
     <string name="update_destination_blocked">Bloquiáu</string>
     <string name="update_destination_unblocked">Desbloquiáu</string>
     <string name="db_full">Hai pocu espaciu d\'almacenamientu. Dellos datos pueden perdese.</string>
