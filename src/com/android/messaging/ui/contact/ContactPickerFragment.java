@@ -21,9 +21,6 @@ import android.app.Fragment;
 import android.database.Cursor;
 import android.graphics.Rect;
 import android.os.Bundle;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.widget.Toolbar;
-import androidx.appcompat.widget.Toolbar.OnMenuItemClickListener;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextUtils;
@@ -32,13 +29,11 @@ import android.transition.Explode;
 import android.transition.Transition;
 import android.transition.Transition.EpicenterCallback;
 import android.transition.TransitionManager;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
+import android.view.*;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup;
-
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.widget.Toolbar;
+import androidx.appcompat.widget.Toolbar.OnMenuItemClickListener;
 import com.android.messaging.R;
 import com.android.messaging.datamodel.DataModel;
 import com.android.messaging.datamodel.action.ActionMonitor;
@@ -55,14 +50,8 @@ import com.android.messaging.ui.CustomHeaderPagerViewHolder;
 import com.android.messaging.ui.CustomHeaderViewPager;
 import com.android.messaging.ui.animation.ViewGroupItemVerticalExplodeAnimation;
 import com.android.messaging.ui.contact.ContactRecipientAutoCompleteView.ContactChipsChangeListener;
-import com.android.messaging.util.Assert;
+import com.android.messaging.util.*;
 import com.android.messaging.util.Assert.RunsOnMainThread;
-import com.android.messaging.util.ContactUtil;
-import com.android.messaging.util.ImeUtil;
-import com.android.messaging.util.LogUtil;
-import com.android.messaging.util.OsUtil;
-import com.android.messaging.util.PhoneUtils;
-import com.android.messaging.util.UiUtils;
 import com.google.common.annotations.VisibleForTesting;
 
 import java.util.ArrayList;
@@ -141,8 +130,7 @@ public class ContactPickerFragment extends Fragment implements ContactPickerData
     public View onCreateView(final LayoutInflater inflater, final ViewGroup container,
             final Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.contact_picker_fragment, container, false);
-        mRecipientTextView = (ContactRecipientAutoCompleteView)
-                view.findViewById(R.id.recipient_text_view);
+        mRecipientTextView = view.findViewById(R.id.recipient_text_view);
         mRecipientTextView.setThreshold(0);
         mRecipientTextView.setDropDownAnchor(R.id.compose_contact_divider);
 
@@ -171,7 +159,7 @@ public class ContactPickerFragment extends Fragment implements ContactPickerData
                 mFrequentContactsListViewHolder,
                 mAllContactsListViewHolder };
 
-        mCustomHeaderViewPager = (CustomHeaderViewPager) view.findViewById(R.id.contact_pager);
+        mCustomHeaderViewPager = view.findViewById(R.id.contact_pager);
         mCustomHeaderViewPager.setViewHolders(viewHolders);
         mCustomHeaderViewPager.setViewPagerTabHeight(CustomHeaderViewPager.DEFAULT_TAB_STRIP_SIZE);
         mCustomHeaderViewPager.setBackgroundColor(getResources()
@@ -180,7 +168,7 @@ public class ContactPickerFragment extends Fragment implements ContactPickerData
         // The view pager defaults to the frequent contacts page.
         mCustomHeaderViewPager.setCurrentItem(0);
 
-        mToolbar = (Toolbar) view.findViewById(R.id.toolbar);
+        mToolbar = view.findViewById(R.id.toolbar);
         mToolbar.setNavigationIcon(R.drawable.ic_arrow_back_light);
         mToolbar.setNavigationContentDescription(R.string.back);
         mToolbar.setNavigationOnClickListener(new OnClickListener() {

@@ -26,7 +26,12 @@
     </style>
 
     <style name="ConversationActionBarTitleTextStyle" parent="BugleActionBarTitleTextStyle">
-      <item name="android:background">?android:attr/selectableItemBackgroundBorderless</item>
+        <item name="android:background">?android:attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+    <style name="BugleTheme.PermissionCheckActivity" parent="BugleTheme">
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:navigationBarColor">@color/primary_color</item>
     </style>
 
     <style name="BugleTheme.PermissionCheckActivity" parent="BugleTheme">

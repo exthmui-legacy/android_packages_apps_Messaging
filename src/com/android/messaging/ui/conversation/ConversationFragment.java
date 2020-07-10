@@ -17,22 +17,11 @@
 package com.android.messaging.ui.conversation;
 
 import android.Manifest;
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.DownloadManager;
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
-import android.content.BroadcastReceiver;
-import android.content.ClipData;
-import android.content.ClipboardManager;
-import android.content.Context;
-import android.content.DialogInterface;
+import android.app.*;
+import android.content.*;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.DialogInterface.OnClickListener;
 import android.content.DialogInterface.OnDismissListener;
-import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.res.Configuration;
 import android.database.Cursor;
 import android.graphics.Point;
@@ -43,26 +32,17 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Parcelable;
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+import android.text.TextUtils;
+import android.view.*;
+import android.widget.TextView;
+import androidx.appcompat.app.ActionBar;
 import androidx.core.text.BidiFormatter;
 import androidx.core.text.TextDirectionHeuristicsCompat;
-import androidx.appcompat.app.ActionBar;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.RecyclerView.ViewHolder;
-import android.text.TextUtils;
-import android.view.ActionMode;
-import android.view.Display;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewConfiguration;
-import android.view.ViewGroup;
-import android.widget.TextView;
-
 import com.android.messaging.R;
 import com.android.messaging.datamodel.DataModel;
 import com.android.messaging.datamodel.MessagingContentProvider;
@@ -70,40 +50,18 @@ import com.android.messaging.datamodel.action.InsertNewMessageAction;
 import com.android.messaging.datamodel.binding.Binding;
 import com.android.messaging.datamodel.binding.BindingBase;
 import com.android.messaging.datamodel.binding.ImmutableBindingRef;
-import com.android.messaging.datamodel.data.ConversationData;
+import com.android.messaging.datamodel.data.*;
 import com.android.messaging.datamodel.data.ConversationData.ConversationDataListener;
-import com.android.messaging.datamodel.data.ConversationMessageData;
-import com.android.messaging.datamodel.data.ConversationParticipantsData;
-import com.android.messaging.datamodel.data.DraftMessageData;
 import com.android.messaging.datamodel.data.DraftMessageData.DraftMessageDataListener;
-import com.android.messaging.datamodel.data.MessageData;
-import com.android.messaging.datamodel.data.MessagePartData;
-import com.android.messaging.datamodel.data.ParticipantData;
 import com.android.messaging.datamodel.data.SubscriptionListData.SubscriptionListEntry;
-import com.android.messaging.ui.AttachmentPreview;
-import com.android.messaging.ui.BugleActionBarActivity;
-import com.android.messaging.ui.ConversationDrawables;
-import com.android.messaging.ui.SnackBar;
-import com.android.messaging.ui.UIIntents;
+import com.android.messaging.ui.*;
 import com.android.messaging.ui.animation.PopupTransitionAnimation;
 import com.android.messaging.ui.contact.AddContactsConfirmationDialog;
 import com.android.messaging.ui.conversation.ComposeMessageView.IComposeMessageViewHost;
 import com.android.messaging.ui.conversation.ConversationInputManager.ConversationInputHost;
 import com.android.messaging.ui.conversation.ConversationMessageView.ConversationMessageViewHost;
 import com.android.messaging.ui.mediapicker.MediaPicker;
-import com.android.messaging.util.AccessibilityUtil;
-import com.android.messaging.util.Assert;
-import com.android.messaging.util.AvatarUriUtil;
-import com.android.messaging.util.ChangeDefaultSmsAppHelper;
-import com.android.messaging.util.ContentType;
-import com.android.messaging.util.ImeUtil;
-import com.android.messaging.util.LogUtil;
-import com.android.messaging.util.OsUtil;
-import com.android.messaging.util.PhoneUtils;
-import com.android.messaging.util.SafeAsyncTask;
-import com.android.messaging.util.TextUtil;
-import com.android.messaging.util.UiUtils;
-import com.android.messaging.util.UriUtil;
+import com.android.messaging.util.*;
 import com.google.common.annotations.VisibleForTesting;
 
 import java.io.File;
@@ -506,7 +464,7 @@ public class ConversationFragment extends Fragment implements ConversationDataLi
     public View onCreateView(final LayoutInflater inflater, final ViewGroup container,
             final Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.conversation_fragment, container, false);
-        mRecyclerView = (RecyclerView) view.findViewById(android.R.id.list);
+        mRecyclerView = view.findViewById(android.R.id.list);
         final LinearLayoutManager manager = new LinearLayoutManager(getActivity());
         manager.setStackFromEnd(true);
         manager.setReverseLayout(false);
@@ -528,7 +486,7 @@ public class ConversationFragment extends Fragment implements ConversationDataLi
                         !data.getIsIncoming() &&
                         timeSinceSend < MESSAGE_ANIMATION_MAX_WAIT) {
                     final ConversationMessageBubbleView messageBubble =
-                            (ConversationMessageBubbleView) view
+                            view
                                     .findViewById(R.id.message_content);
                     final Rect startRect = UiUtils.getMeasuredBoundsOnScreen(mComposeMessageView);
                     final View composeBubbleView = mComposeMessageView.findViewById(
@@ -536,7 +494,7 @@ public class ConversationFragment extends Fragment implements ConversationDataLi
                     final Rect composeBubbleRect =
                             UiUtils.getMeasuredBoundsOnScreen(composeBubbleView);
                     final AttachmentPreview attachmentView =
-                            (AttachmentPreview) mComposeMessageView.findViewById(
+                            mComposeMessageView.findViewById(
                                     R.id.attachment_draft_view);
                     final Rect attachmentRect = UiUtils.getMeasuredBoundsOnScreen(attachmentView);
                     if (attachmentView.getVisibility() == View.VISIBLE) {
@@ -609,8 +567,7 @@ public class ConversationFragment extends Fragment implements ConversationDataLi
                 UiUtils.isRtlMode() ? ConversationFastScroller.POSITION_LEFT_SIDE :
                     ConversationFastScroller.POSITION_RIGHT_SIDE);
 
-        mComposeMessageView = (ComposeMessageView)
-                view.findViewById(R.id.message_compose_view_container);
+        mComposeMessageView = view.findViewById(R.id.message_compose_view_container);
         // Bind the compose message view to the DraftMessageData
         mComposeMessageView.bind(DataModel.get().createDraftMessageData(
                 mBinding.getData().getConversationId()), this);
@@ -777,7 +734,7 @@ public class ConversationFragment extends Fragment implements ConversationDataLi
                 final View targetView = getActivity().findViewById(R.id.action_call);
                 Point centerPoint;
                 if (targetView != null) {
-                    final int screenLocation[] = new int[2];
+                    final int[] screenLocation = new int[2];
                     targetView.getLocationOnScreen(screenLocation);
                     final int centerX = screenLocation[0] + targetView.getWidth() / 2;
                     final int centerY = screenLocation[1] + targetView.getHeight() / 2;
@@ -1239,10 +1196,7 @@ public class ConversationFragment extends Fragment implements ConversationDataLi
     }
 
     public boolean onBackPressed() {
-        if (mComposeMessageView.onBackPressed()) {
-            return true;
-        }
-        return false;
+        return mComposeMessageView.onBackPressed();
     }
 
     public boolean onNavigationUpPressed() {
@@ -1565,7 +1519,7 @@ public class ConversationFragment extends Fragment implements ConversationDataLi
             }
 
             final TextView conversationNameView =
-                    (TextView) customView.findViewById(R.id.conversation_title);
+                    customView.findViewById(R.id.conversation_title);
             final String conversationName = getConversationName();
             if (!TextUtils.isEmpty(conversationName)) {
                 // RTL : To format conversation title if it happens to be phone numbers.
