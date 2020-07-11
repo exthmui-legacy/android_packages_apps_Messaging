@@ -34,9 +34,4 @@
         <item name="android:navigationBarColor">@color/primary_color</item>
     </style>
 
-    <style name="BugleTheme.PermissionCheckActivity" parent="BugleTheme">
-        <item name="android:fitsSystemWindows">true</item>
-        <item name="android:navigationBarColor">@color/primary_color</item>
-    </style>
-
 </resources>

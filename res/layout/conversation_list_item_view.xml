@@ -63,6 +63,7 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center_vertical"
             android:background="?android:attr/selectableItemBackground"
             android:clipToPadding="false"
             android:duplicateParentState="true"
@@ -109,7 +110,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_gravity="top"
                 android:background="@android:color/transparent">
                 <LinearLayout
                     android:orientation="horizontal"
@@ -124,11 +124,17 @@
                         <TextView
                             android:id="@+id/conversation_name"
                             style="@style/ConversationListItemViewConversationNameStyle"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.0"
                             android:layout_height="wrap_content"
                             android:singleLine="true"
                             android:layout_gravity="center_vertical"
                             android:paddingBottom="2dp" />
+                        <TextView
+                            android:id="@+id/conversation_timestamp"
+                            style="@style/ConversationListItemViewTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
                     </LinearLayout>
                     <ImageView
                             android:id="@+id/work_profile_icon"
@@ -146,7 +152,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:singleLine="true"
-                    android:paddingBottom="3dp"
+                    android:layout_marginTop="3dp"
                     android:ellipsize="end"
                     android:visibility="gone" />
                 <TextView
@@ -154,13 +160,15 @@
                     style="@style/ConversationListItemViewTextStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingBottom="3dp"
+                    android:layout_marginTop="3dp"
                     android:ellipsize="end" />
                 <TextView
-                    android:id="@+id/conversation_timestamp"
+                    android:id="@+id/conversation_status"
                     style="@style/ConversationListItemViewTextStyle"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginTop="3dp"/>
             </LinearLayout>
 
             <!-- The attachment preview on the right side of the view -->

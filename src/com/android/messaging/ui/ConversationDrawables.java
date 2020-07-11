@@ -129,13 +129,14 @@ public class ConversationDrawables {
             if (isError) {
                 color = mIncomingErrorBubbleColor;
             } else {
-                if (identifier != null &&
-                        mContext.getResources().getBoolean(R.bool.contact_colors)) {
-                    int idcolor = Math.abs(identifier.hashCode()) % mColors.length();
-                    color = mColors.getColor(idcolor, mThemeColor);
-                } else {
-                    color = mOutgoingBubbleColor;
-                }
+//                if (identifier != null &&
+//                        mContext.getResources().getBoolean(R.bool.contact_colors)) {
+//                    int idcolor = Math.abs(identifier.hashCode()) % mColors.length();
+//                    color = mColors.getColor(idcolor, mThemeColor);
+//                } else {
+//                    color = mOutgoingBubbleColor;
+//                }
+                color = mOutgoingBubbleColor;
             }
         } else {
             color = mOutgoingBubbleColor;

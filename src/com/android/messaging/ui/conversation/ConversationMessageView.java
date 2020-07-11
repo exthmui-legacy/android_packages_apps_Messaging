@@ -766,19 +766,15 @@ public class ConversationMessageView extends RelativeLayout implements View.OnCl
             // Need to switch right and left padding in RtL mode
             mMessageTextAndInfoView.setPadding(textRightPadding, textTopPadding, textLeftPadding,
                     textBottomPadding);
-            mMessageBubble.setPadding(contentRightPadding, 0, contentLeftPadding, 0);
         } else {
             mMessageTextAndInfoView.setPadding(textLeftPadding, textTopPadding, textRightPadding,
                     textBottomPadding);
-            mMessageBubble.setPadding(contentLeftPadding, 0, contentRightPadding, 0);
         }
 
         // Update the message row and message bubble views
         setPadding(getPaddingLeft(), messageTopPadding, getPaddingRight(), 0);
         mMessageBubble.setGravity(gravity);
         updateMessageAttachmentsAppearance(gravity);
-
-        mMessageMetadataView.setPadding(0, metadataTopPadding, 0, 0);
 
         updateTextAppearance();
 
@@ -905,11 +901,11 @@ public class ConversationMessageView extends RelativeLayout implements View.OnCl
         int timestampColorResId;
         int subjectLabelColorResId;
         if (isSelected()) {
-            messageColorResId = R.color.message_text_color_incoming;
+            messageColorResId = R.color.message_text_color_incoming_selected;
             statusColorResId = R.color.message_action_status_text;
             infoColorResId = R.color.message_action_info_text;
             if (shouldShowMessageTextBubble()) {
-                timestampColorResId = R.color.message_action_timestamp_text;
+                timestampColorResId = R.color.timestamp_text_outgoing;
                 subjectLabelColorResId = R.color.message_action_timestamp_text;
             } else {
                 // If there's no text, the timestamp will be shown below the attachments,
@@ -969,7 +965,7 @@ public class ConversationMessageView extends RelativeLayout implements View.OnCl
         }
         final int messageColor = getResources().getColor(messageColorResId);
         mMessageTextView.setTextColor(messageColor);
-        mMessageTextView.setLinkTextColor(messageColor);
+        mMessageTextView.setLinkTextColor(getResources().getColor(R.color.message_link_text_color));
         mSubjectText.setTextColor(messageColor);
         if (statusColorResId >= 0) {
             mTitleTextView.setTextColor(getResources().getColor(statusColorResId));

@@ -556,38 +556,4 @@ public class UIIntentsImpl extends UIIntents {
         context.startService(intent);
     }
 
-    @Override
-    public PendingIntent getWidgetPendingIntentForConversationActivity(final Context context,
-            final String conversationId, final int requestCode) {
-        final Intent intent = getConversationActivityIntent(context, null, null,
-                false /* withCustomTransition */);
-        if (conversationId != null) {
-            intent.putExtra(UI_INTENT_EXTRA_CONVERSATION_ID, conversationId);
-
-            // Set the action to something unique to this conversation so if someone calls this
-            // function again on a different conversation, they'll get a new PendingIntent instead
-            // of the old one.
-            intent.setAction(ACTION_WIDGET_CONVERSATION + conversationId);
-        }
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        return getPendingIntentWithParentStack(context, intent, requestCode);
-    }
-
-    @Override
-    public PendingIntent getWidgetPendingIntentForConversationListActivity(
-            final Context context) {
-        final Intent intent = getConversationListActivityIntent(context);
-        return getPendingIntentWithParentStack(context, intent, 0);
-    }
-
-    @Override
-    public PendingIntent getWidgetPendingIntentForConfigurationActivity(final Context context,
-            final int appWidgetId) {
-        final Intent configureIntent = new Intent(context, WidgetPickConversationActivity.class);
-        configureIntent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId);
-        configureIntent.setAction(AppWidgetManager.ACTION_APPWIDGET_CONFIGURE);
-        configureIntent.setData(Uri.parse(configureIntent.toUri(Intent.URI_INTENT_SCHEME)));
-        configureIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_NO_HISTORY);
-        return getPendingIntentWithParentStack(context, configureIntent, 0);
-    }
 }

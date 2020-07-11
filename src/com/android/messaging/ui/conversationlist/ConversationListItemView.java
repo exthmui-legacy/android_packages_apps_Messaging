@@ -124,6 +124,7 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
     private ImageView mWorkProfileIconView;
     private TextView mSnippetTextView;
     private TextView mSubjectTextView;
+    private TextView mStatusTextView;
     private TextView mTimestampTextView;
     private ContactIconView mContactIconView;
     private ImageView mContactCheckmarkView;
@@ -142,6 +143,7 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
 
     @Override
     protected void onFinishInflate() {
+        super.onFinishInflate();
         mSwipeableContainer = (ViewGroup) findViewById(R.id.swipeableContainer);
         mCrossSwipeBackground = (ViewGroup) findViewById(R.id.crossSwipeBackground);
         mSwipeableContent = (ViewGroup) findViewById(R.id.swipeableContent);
@@ -149,6 +151,7 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
         mSnippetTextView = (TextView) findViewById(R.id.conversation_snippet);
         mSubjectTextView = (TextView) findViewById(R.id.conversation_subject);
         mWorkProfileIconView = (ImageView) findViewById(R.id.work_profile_icon);
+        mStatusTextView = (TextView) findViewById(R.id.conversation_status);
         mTimestampTextView = (TextView) findViewById(R.id.conversation_timestamp);
         mContactIconView = (ContactIconView) findViewById(R.id.conversation_icon);
         mContactCheckmarkView = (ImageView) findViewById(R.id.conversation_checkmark);
@@ -402,35 +405,40 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
         setContentDescription(buildContentDescription(resources, mData,
                 mConversationNameView.getPaint()));
 
+        mTimestampTextView.setTextColor(mListItemReadColor);
+        mTimestampTextView.setTypeface(mListItemReadTypeface, typefaceStyle);
+        final String formattedTimestamp = mData.getFormattedTimestamp();
+        mTimestampTextView.setText(formattedTimestamp);
+
         final boolean isDefaultSmsApp = PhoneUtils.getDefault().isDefaultSmsApp();
         // don't show the error state unless we're the default sms app
         if (mData.getIsFailedStatus() && isDefaultSmsApp) {
-            mTimestampTextView.setTextColor(resources.getColor(R.color.conversation_list_error));
-            mTimestampTextView.setTypeface(mListItemReadTypeface, typefaceStyle);
+            mStatusTextView.setVisibility(VISIBLE);
+            mStatusTextView.setTextColor(resources.getColor(R.color.conversation_list_error));
+            mStatusTextView.setTypeface(mListItemReadTypeface, typefaceStyle);
             int failureMessageId = R.string.message_status_download_failed;
             if (mData.getIsMessageTypeOutgoing()) {
                 failureMessageId = MmsUtils.mapRawStatusToErrorResourceId(mData.getMessageStatus(),
                         mData.getMessageRawTelephonyStatus());
             }
-            mTimestampTextView.setText(resources.getString(failureMessageId));
+            mStatusTextView.setText(resources.getString(failureMessageId));
         } else if (mData.getShowDraft()
                 || mData.getMessageStatus() == MessageData.BUGLE_STATUS_OUTGOING_DRAFT
                 // also check for unknown status which we get because sometimes the conversation
                 // row is left with a latest_message_id of a no longer existing message and
                 // therefore the join values come back as null (or in this case zero).
                 || mData.getMessageStatus() == MessageData.BUGLE_STATUS_UNKNOWN) {
-            mTimestampTextView.setTextColor(mListItemReadColor);
-            mTimestampTextView.setTypeface(mListItemReadTypeface, typefaceStyle);
-            mTimestampTextView.setText(resources.getString(
+            mStatusTextView.setVisibility(VISIBLE);
+            mStatusTextView.setTextColor(mListItemReadColor);
+            mStatusTextView.setTypeface(mListItemReadTypeface, typefaceStyle);
+            mStatusTextView.setText(resources.getString(
                     R.string.conversation_list_item_view_draft_message));
          } else {
-            mTimestampTextView.setTextColor(mListItemReadColor);
-            mTimestampTextView.setTypeface(mListItemReadTypeface, typefaceStyle);
-            final String formattedTimestamp = mData.getFormattedTimestamp();
             if (mData.getIsSendRequested()) {
-                mTimestampTextView.setText(R.string.message_status_sending);
+
+                mStatusTextView.setText(R.string.message_status_sending);
             } else {
-                mTimestampTextView.setText(formattedTimestamp);
+
             }
         }
 

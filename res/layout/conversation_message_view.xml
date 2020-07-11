@@ -128,45 +128,50 @@
                 android:visibility="gone"
                 android:importantForAccessibility="no" />
 
-            <com.android.messaging.ui.LineWrapLayout
-                android:id="@+id/message_metadata"
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:importantForAccessibility="noHideDescendants" >
 
-                <TextView
-                    android:id="@+id/message_sender_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="4dp"
-                    style="@style/ConversationMessageStatus"
-                    android:visibility="gone" />
-                <TextView
-                    android:id="@+id/message_status"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/ConversationMessageStatus"
-                    android:visibility="gone" />
-                <TextView
-                    android:id="@+id/sim_name"
-                    style="@style/MessageSimIndicator"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:visibility="gone" />
-                <ImageView
-                    android:id="@+id/smsDeliveredBadge"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    style="@style/SmsDeliverdBadge"
-                    android:src="@drawable/ic_sms_delivery_ok"
-                    android:visibility="gone" />
-            </com.android.messaging.ui.LineWrapLayout>
 
         </com.android.messaging.ui.conversation.MessageBubbleBackground>
+
+        <com.android.messaging.ui.LineWrapLayout
+            android:id="@+id/message_metadata"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="3dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:importantForAccessibility="noHideDescendants" >
+
+            <TextView
+                android:id="@+id/message_sender_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="4dp"
+                style="@style/ConversationMessageStatus"
+                android:visibility="gone" />
+            <TextView
+                android:id="@+id/message_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/ConversationMessageStatus"
+                android:visibility="gone" />
+            <TextView
+                android:id="@+id/sim_name"
+                style="@style/MessageSimIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone" />
+            <ImageView
+                android:id="@+id/smsDeliveredBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                style="@style/SmsDeliverdBadge"
+                android:src="@drawable/ic_sms_delivery_ok"
+                android:visibility="gone" />
+        </com.android.messaging.ui.LineWrapLayout>
 
     </com.android.messaging.ui.conversation.ConversationMessageBubbleView>
 

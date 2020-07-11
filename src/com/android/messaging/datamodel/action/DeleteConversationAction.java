@@ -36,7 +36,6 @@ import com.android.messaging.sms.MmsUtils;
 import com.android.messaging.util.Assert;
 import com.android.messaging.util.LogUtil;
 import com.android.messaging.util.NotificationsUtil;
-import com.android.messaging.widget.WidgetConversationProvider;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -91,10 +90,6 @@ public class DeleteConversationAction extends Action implements Parcelable {
                 // We have changed the conversation list
                 MessagingContentProvider.notifyConversationListChanged();
 
-                // Notify the widget the conversation is deleted so it can go into its configure state.
-                WidgetConversationProvider.notifyConversationDeleted(
-                        Factory.get().getApplicationContext(),
-                        conversationId);
             } else {
                 LogUtil.w(TAG, "DeleteConversationAction: Could not delete local conversation "
                         + conversationId);

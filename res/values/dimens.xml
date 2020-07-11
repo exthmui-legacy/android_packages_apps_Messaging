@@ -60,6 +60,7 @@
     <dimen name="compose_message_mms_indicator_padding_top">2dp</dimen>
     <dimen name="compose_message_send_button_padding_right">12dp</dimen>
     <dimen name="compose_message_text_box_padding_side">12dp</dimen>
+    <dimen name="compose_message_attachment_padding_topBottom">18dp</dimen>
 
     <!-- Notification related dimensions. -->
     <dimen name="notification_wearable_image_height">240dp</dimen>

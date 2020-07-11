@@ -35,11 +35,6 @@
         android:clipToPadding="false"
         android:orientation="vertical">
 
-        <View
-            android:id="@+id/top_margin"
-            android:layout_width="match_parent"
-            android:layout_height="16dp" />
-
         <include layout="@layout/attachment_preview"
             android:id="@+id/attachment_draft_view"
             style="@style/ComposeMessageViewDraftViewStyle"
@@ -86,6 +81,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
             android:orientation="horizontal">
 
             <!-- Contains compose message bubble and character counter for SMS or attachments size
@@ -111,8 +108,6 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:src="@drawable/ic_attachment_dark"
-                        android:paddingTop="@dimen/compose_message_attachment_padding_topBottom"
-                        android:paddingBottom="@dimen/compose_message_attachment_padding_topBottom"
                         android:contentDescription="@string/attachMediaButtonContentDescription" />
 
                     <com.android.messaging.ui.PlainTextEditText
@@ -135,7 +130,7 @@
                     android:layout_height="wrap_content"
                     android:singleLine="true"
                     android:maxLines="1"
-                    android:visibility="invisible" />
+                    android:visibility="gone" />
             </LinearLayout>
 
             <LinearLayout
@@ -147,7 +142,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/ComposeMessageViewFrameLayoutStyle"
-                    android:layout_gravity="top" >
+                    android:layout_gravity="center_vertical" >
                     <com.android.messaging.ui.conversation.SimIconView
                         android:id="@+id/self_send_icon"
                         android:layout_width="@dimen/conversation_message_contact_icon_size"

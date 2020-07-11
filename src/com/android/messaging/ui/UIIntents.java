@@ -290,12 +290,6 @@ public abstract class UIIntents {
             final Context context);
 
     /**
-     * Get a PendingIntent for starting conversation list from widget.
-     */
-    public abstract PendingIntent getWidgetPendingIntentForConversationListActivity(
-            final Context context);
-
-    /**
      * Get a PendingIntent for showing a conversation from notifications.
      */
     public abstract PendingIntent getPendingIntentForConversationActivity(final Context context,
@@ -374,17 +368,5 @@ public abstract class UIIntents {
      * Launch to browser for a url.
      */
     public abstract void launchBrowserForUrl(final Context context, final String url);
-
-    /**
-     * Get a PendingIntent for the widget conversation template.
-     */
-    public abstract PendingIntent getWidgetPendingIntentForConversationActivity(
-            final Context context, final String conversationId, final int requestCode);
-
-    /**
-     * Get a PendingIntent for the conversation widget configuration activity template.
-     */
-    public abstract PendingIntent getWidgetPendingIntentForConfigurationActivity(
-            final Context context, final int appWidgetId);
 
 }

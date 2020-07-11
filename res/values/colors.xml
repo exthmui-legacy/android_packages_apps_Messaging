@@ -15,8 +15,6 @@
     limitations under the License.
 -->
 <resources>
-<!--    <color name="primary_color">#17c974</color>-->
-<!--    <color name="primary_color">#00c853</color>-->
     <color name="primary_color">#2196f3</color>
     <color name="permission_check_activity_background">@color/primary_color</color>
 
@@ -24,7 +22,7 @@
     <color name="action_bar_title_text_color">#ffffff</color>
     <color name="action_bar_background_color">@color/primary_color</color>
     <color name="action_bar_background_color_dark">@color/primary_color</color>
-    <color name="contextual_action_bar_background_color">#ffffff</color>
+    <color name="contextual_action_bar_background_color">@color/primary_color</color>
     <color name="archived_conversation_action_bar_background_color">#9D9D9D</color>
     <color name="archived_conversation_action_bar_background_color_dark">#838383</color>
 
@@ -60,17 +58,19 @@
 
     <color name="subject_editor_bubble">#ffffffff</color>
     <color name="message_text_color_incoming">#ff363636</color>
+    <color name="message_text_color_incoming_selected">#ffffffff</color>
     <color name="message_text_color_incoming_download_failed">#6a6a6a</color>
     <color name="message_text_color_outgoing">#ff363636</color>
     <color name="conversation_background">#ffffffff</color>
     <color name="conversation_edge_effect">#9d9d9d</color>
     <color name="compose_message_send_color">@color/lineage_accent</color>
     <color name="compose_message_send_color_pressed">#999999</color>
-    <color name="message_bubble_color_outgoing">#fff6f6f6</color>
+    <color name="message_bubble_color_outgoing">#fff2f2f2</color>
     <color name="message_error_bubble_color_incoming">#e2e2e2</color>
     <color name="message_audio_button_color_incoming">#ffffffff</color>
     <color name="message_bubble_color_selected">@color/primary_color</color>
     <color name="message_image_selected_tint">#802196f3</color>
+    <color name="message_link_text_color">#0066ff</color>
     <color name="generic_video_icon">#ff808080</color>
 
     <!-- Base color used for color filtering. -->
