@@ -32,19 +32,19 @@
         appcompat:showAsAction="collapseActionView|always"/>
     <item
         android:id="@+id/action_delete"
-        android:icon="@drawable/ic_delete_small_dark"
+        android:icon="@drawable/ic_delete"
         android:orderInCategory="60"
         android:title="@string/action_delete"
         appcompat:showAsAction="collapseActionView|always"/>
     <item
         android:id="@+id/action_add_contact"
-        android:icon="@drawable/ic_person_add_dark"
+        android:icon="@drawable/ic_person_add"
         android:orderInCategory="90"
         android:title="@string/action_add_contact"
         appcompat:showAsAction="collapseActionView|always"/>
     <item
         android:id="@+id/action_block"
-        android:icon="@drawable/ic_dnd_on_dark"
+        android:icon="@drawable/ic_dnd_on"
         android:orderInCategory="100"
         android:title="@string/action_block"
         appcompat:showAsAction="collapseActionView|always"/>

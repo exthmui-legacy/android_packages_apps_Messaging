@@ -23,6 +23,7 @@ LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
 LOCAL_USE_AAPT2 := true
 
 LOCAL_STATIC_ANDROID_LIBRARIES := \
+    androidx.cardview_cardview \
     androidx.core_core \
     androidx.media_media \
     androidx.legacy_legacy-support-core-utils \
