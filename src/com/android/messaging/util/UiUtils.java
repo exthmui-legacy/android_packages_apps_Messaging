@@ -440,7 +440,4 @@ public class UiUtils {
         return null;
     }
 
-    public static RemoteViews getWidgetMissingPermissionView(final Context context) {
-        return new RemoteViews(context.getPackageName(), R.layout.widget_missing_permission);
-    }
 }
