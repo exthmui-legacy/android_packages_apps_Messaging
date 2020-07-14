@@ -68,7 +68,7 @@
                     android:minWidth="48dp"
                     android:minHeight="48dp"
                     android:background="@drawable/transparent_button_background"
-                    android:src="@drawable/ic_mp_video_small_light"
+                    android:src="@drawable/ic_mp_video_small"
                     android:contentDescription="@string/camera_switch_to_video_mode"/>
 
                 <Chronometer

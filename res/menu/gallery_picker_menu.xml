@@ -20,14 +20,14 @@
 
     <item
         android:id="@+id/action_multiselect"
-        android:icon="@drawable/ic_checkbox_outline_light"
+        android:icon="@drawable/ic_checkbox_outline"
         android:orderInCategory="100"
         android:title="@string/action_multiselect"
         appcompat:showAsAction="always"/>
 
     <item
         android:id="@+id/action_confirm_multiselect"
-        android:icon="@drawable/ic_checkmark_small_light"
+        android:icon="@drawable/ic_checkmark"
         android:orderInCategory="101"
         android:title="@string/action_confirm_multiselect"
         appcompat:showAsAction="always"/>

@@ -20,13 +20,13 @@
 
     <item
         android:id="@+id/action_archive"
-        android:icon="@drawable/ic_archive_small_dark"
+        android:icon="@drawable/ic_archive"
         android:orderInCategory="50"
         android:title="@string/action_archive"
         appcompat:showAsAction="collapseActionView|always"/>
     <item
         android:id="@+id/action_unarchive"
-        android:icon="@drawable/ic_archive_undo_small_dark"
+        android:icon="@drawable/ic_unarchive"
         android:orderInCategory="50"
         android:title="@string/action_unarchive"
         appcompat:showAsAction="collapseActionView|always"/>

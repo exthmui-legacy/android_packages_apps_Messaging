@@ -443,8 +443,8 @@ class CameraMediaChooser extends MediaChooser implements
         mVideoCounter.setVisibility(isRecording ? View.VISIBLE : View.GONE);
 
         mSwapModeButton.setImageResource(videoMode ?
-                R.drawable.ic_mp_camera_small_light :
-                R.drawable.ic_mp_video_small_light);
+                R.drawable.ic_mp_camera_small :
+                R.drawable.ic_mp_video_small);
         mSwapModeButton.setContentDescription(context.getString(videoMode ?
                 R.string.camera_switch_to_still_mode : R.string.camera_switch_to_video_mode));
         mSwapModeButton.setVisibility(isRecording ? View.GONE : View.VISIBLE);

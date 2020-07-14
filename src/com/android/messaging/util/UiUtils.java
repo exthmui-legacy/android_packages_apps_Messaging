@@ -439,8 +439,4 @@ public class UiUtils {
         // We've hit a non-activity context such as an app-context
         return null;
     }
-
-    public static RemoteViews getWidgetMissingPermissionView(final Context context) {
-        return new RemoteViews(context.getPackageName(), R.layout.widget_missing_permission);
-    }
 }

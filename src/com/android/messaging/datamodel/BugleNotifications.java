@@ -949,7 +949,7 @@ public class BugleNotifications {
                 RedownloadMmsAction.getPendingIntentForRedownloadMms(context, messageId);
 
         final NotificationCompat.Action.Builder actionBuilder =
-                new NotificationCompat.Action.Builder(R.drawable.ic_file_download_light,
+                new NotificationCompat.Action.Builder(R.drawable.ic_file_download,
                         context.getString(R.string.notification_download_mms),
                         downloadPendingIntent);
         final NotificationCompat.Action downloadAction = actionBuilder.build();
