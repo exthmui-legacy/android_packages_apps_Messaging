@@ -176,10 +176,11 @@
 
     <color name="contact_picker_button_text_color">@color/primary_color</color>
 
-    <color name="widget_text_color">#424242</color>
-    <color name="widget_incoming_text_color">@android:color/white</color>
-    <color name="widget_outgoing_text_color">#424242</color>
-    <color name="widget_background_color">#ffffff</color>
+<!--    unused resources-->
+<!--    <color name="widget_text_color">#424242</color>-->
+<!--    <color name="widget_incoming_text_color">@android:color/white</color>-->
+<!--    <color name="widget_outgoing_text_color">#424242</color>-->
+<!--    <color name="widget_background_color">#ffffff</color>-->
     <color name="ripple_material_light">#3d000000</color>
     <color name="widget_conversation_title_color">#FFFFFF</color>
 
