@@ -18,105 +18,106 @@ package com.android.messaging.util;
 
 import android.text.TextUtils;
 
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class CaptchaUtil {
 
-    private static String[] specialRegex = {
+    /* 匹配度 */
+    private static final int RANK_DIGITAL_6 = 4;        // 6位纯数字
+    private static final int RANK_DIGITAL_4 = 3;        // 4位纯数字
+    private static final int RANK_DIGITAL_OTHERS = 2;   // 纯数字
+    private static final int RANK_DIGITAL_LETTERS = 1;  // 数字 + 字母
+    private static final int RANK_NONE = -1;            // 不是验证码
+
+    /* 关键字 */
+    private static final String[] KEYWORDS = {"码", "碼", "口令", "コード", "PIN", "code", "Code", "CODE"};
+    /* 提取验证码的正则 */
+    private static final Pattern CODE_REGEX = Pattern.compile("(?<![a-zA-Z0-9])[a-zA-Z0-9]{4,8}(?![a-zA-Z0-9])");
+    /* 特判正则 */
+    private static final String[] SPECIAL_REGEX = {
             "【CMK】([0-9]{5})"       // Telegram
     };
 
-    public static String getCaptcha(String sms) {
-        if (sms.length() == 0) {
-            return null;
-        }
+    public static String getCaptcha(String content) {
+        if (TextUtils.isEmpty(content)) return null;
 
-        for (String regex : specialRegex) {
+        content = content.replaceAll("[a-zA-z]+://[^\\s]*","");  // remove URL
+
+        // 特判
+        for (String regex : SPECIAL_REGEX) {
             Pattern p = Pattern.compile(regex);
-            Matcher matcher = p.matcher(sms);
+            Matcher matcher = p.matcher(content);
             if (matcher.find()) {
-                return matcher.group(1);
+                return matcher.group();
             }
         }
 
-        String[] sentenceList = sms.replaceAll("[a-zA-z]+://[^\\s]*","") // remove URL
-                .replaceAll("(\\[.{0,}\\]|【.{0,}】)","")                // remove sender
-                .split("[.。;；!！]");
-
-        int keyPos = 0;
-        String code = "";
-
-        for (String str : sentenceList) {
-            keyPos = findKeyWord(str);
-            if (keyPos != -1) {
-                code = cutCaptchaCode(str, keyPos);
-                if (!TextUtils.isEmpty(code)) {
-                    break;
-                }
-            }
-        }
-
-        return code;
-    }
-
-    /* 查找关键字 */
-    private static int findKeyWord(String content) {
-        String[] keyWords = new String[]{"码", "碼", "コード", " code"};
-        int resPos = -1;
-        content = content.toLowerCase();
-
-        for (int i = 0; i < keyWords.length; i++) {
-            resPos = content.indexOf(keyWords[i]);
-            if (resPos != -1) {
+        // 判断是否包含关键字
+        String keyword = null;
+        for (String word : KEYWORDS) {
+            if (content.contains(word)) {
+                keyword = word;
                 break;
             }
         }
-
-        return resPos;
-    }
-
-    private static boolean isCaptchaChar(char c) {
-        return (c >= '0' && c <= '9');
-    }
-
-    private static String cutCaptchaCode(String content, int startPos) {
-        int len = content.length();
-        StringBuilder sb = new StringBuilder();
-
-        // 向右查找
-        for (int i = startPos; i < len; i++) {
-            if (isCaptchaChar(content.charAt(i))) {
-                sb.append(content.charAt(i));
-            } else {
-                if (sb.length() > 3) {
-                    break;
-                } else {
-                    sb.delete(0, sb.length());
-                }
-            }
-        }
-        if (sb.length() > 3) {
-            return sb.toString();
-        } else {
-            // 右边找不到就向左查找
-            sb.delete(0, sb.length());
-            for (int i = startPos; i >= 0; i--) {
-                if (isCaptchaChar(content.charAt(i))) {
-                    sb.append(content.charAt(i));
-                } else {
-                    if (sb.length() > 3) {
-                        break;
-                    } else {
-                        sb.delete(0, sb.length());
-                    }
-                }
-            }
-        }
-        if (sb.length() > 3) {
-           return sb.reverse().toString();
-        } else {
+        if (keyword == null) {
             return null;
         }
+
+        Matcher captchaMatcher = CODE_REGEX.matcher(content);
+
+        ArrayList<String> matchedCodes = new ArrayList<>();
+        while (captchaMatcher.find()) {
+            matchedCodes.add(captchaMatcher.group());
+        }
+        if (matchedCodes.isEmpty()) {
+            return null;
+        }
+
+        int maxRank = RANK_NONE;
+        int minDistance = content.length();
+        String curCode = null;
+
+        for (String code : matchedCodes) {
+            int curRank = getMatchRank(code);
+            int curDistance = getDistanceToKeyword(keyword, code, content);
+            if (curRank > maxRank) {
+                maxRank = curRank;
+                minDistance = curDistance;
+                curCode = code;
+            } else if (curRank == maxRank && curDistance < minDistance) {
+                minDistance = curDistance;
+                curCode = code;
+            }
+        }
+
+        return curCode;
     }
+
+    /**
+     * 取得匹配度
+     */
+    private static int getMatchRank(String matchedStr) {
+        if (matchedStr.matches("^[0-9]{6}$"))
+            return RANK_DIGITAL_6;
+        if (matchedStr.matches("^[0-9]{4}$"))
+            return RANK_DIGITAL_4;
+        if (matchedStr.matches("^[0-9]*$"))
+            return RANK_DIGITAL_OTHERS;
+        if (matchedStr.matches("^[a-zA-Z]*$"))
+            return RANK_NONE;
+        return RANK_DIGITAL_LETTERS;
+    }
+
+    /**
+     * 计算验证码与关键字的距离
+     */
+    private static int getDistanceToKeyword(String keyword, String code, String content) {
+        int keywordIdx = content.indexOf(keyword);
+        int possibleCodeIdx = content.indexOf(code);
+        return Math.abs(keywordIdx - possibleCodeIdx);
+    }
+
 }
