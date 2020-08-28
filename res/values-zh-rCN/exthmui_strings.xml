@@ -15,8 +15,6 @@
     limitations under the License.
 -->
 <resources>
-    <string name="show_quick_reply_templates_title">快速回复模板</string>
-    <string name="show_quick_reply_templates_summary">在短信通知中显示快速回复模板。</string>
     <string name="captcha_copy_action">复制 %s</string>
     <string name="captcha_has_copied_toast">验证码已经复制到剪贴板，长按输入框进行粘贴。</string>
 </resources>
