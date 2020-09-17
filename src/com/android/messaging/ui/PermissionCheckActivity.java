@@ -29,6 +29,7 @@ import android.widget.TextView;
 import com.android.messaging.Factory;
 import com.android.messaging.R;
 import com.android.messaging.util.OsUtil;
+import com.android.messaging.util.UiUtils;
 
 /**
  * Activity to check if the user has required permissions. If not, it will try to prompt the user
@@ -51,6 +52,7 @@ public class PermissionCheckActivity extends Activity {
         }
 
         setContentView(R.layout.permission_check_activity);
+        UiUtils.setStatusBarColor(this, getColor(R.color.permission_check_activity_background));
 
         findViewById(R.id.exit).setOnClickListener(new OnClickListener() {
             @Override
@@ -60,13 +62,21 @@ public class PermissionCheckActivity extends Activity {
         });
 
         mNextView = (TextView) findViewById(R.id.next);
-        mNextView.setOnClickListener(view -> tryRequestPermission());
+        mNextView.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(final View view) {
+                tryRequestPermission();
+            }
+        });
 
         mSettingsView = (TextView) findViewById(R.id.settings);
-        mSettingsView.setOnClickListener(view -> {
-            final Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
-                    Uri.parse(PACKAGE_URI_PREFIX + getPackageName()));
-            startActivity(intent);
+        mSettingsView.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(final View view) {
+                final Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
+                        Uri.parse(PACKAGE_URI_PREFIX + getPackageName()));
+                startActivity(intent);
+            }
         });
     }
 
@@ -119,6 +129,7 @@ public class PermissionCheckActivity extends Activity {
         if (!OsUtil.hasRequiredPermissions()) {
             return false;
         }
+
         redirect();
         return true;
     }
@@ -127,13 +138,4 @@ public class PermissionCheckActivity extends Activity {
         UIIntents.get().launchConversationListActivity(this);
         finish();
     }
-
-    @Override
-    public void onWindowFocusChanged(boolean hasFocus) {
-        super.onWindowFocusChanged(hasFocus);
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION |
-                View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
-    }
-
-
 }
