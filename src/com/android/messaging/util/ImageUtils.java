@@ -878,7 +878,7 @@ public class ImageUtils {
         final Drawable retDrawable = (constantStateDrawable != null)
                 ? constantStateDrawable.newDrawable(context.getResources()).mutate()
                 : drawable;
-        retDrawable.setColorFilter(color, PorterDuff.Mode.SRC_ATOP);
+        if (color != -1) retDrawable.setColorFilter(color, PorterDuff.Mode.SRC_ATOP);
         return retDrawable;
     }
 
