@@ -157,7 +157,7 @@ public class ViewGroupItemVerticalExplodeAnimation {
                 expandLayer.setBottom(viewRect.bottom);
                 expandLayer.setRight(viewRect.right);
                 expandLayer.setBackgroundColor(resources.getColor(
-                        R.color.conversation_background));
+                        R.color.conversation_background_color));
                 ViewCompat.setElevation(expandLayer, elevation);
 
                 // Conditionally stage the snapshot in the overlay.

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <public-group type="drawable" first-id="0x7f0800c9">
+        <public name="message_bubble_incoming_no_arrow" />
+        <public name="message_bubble_outgoing_no_arrow" />
+        <public name="msg_bubble_error" />
+        <public name="msg_bubble_incoming" />
+        <public name="msg_bubble_input" />
+        <public name="msg_bubble_outgoing" />
+    </public-group>
+
+    <public-group type="drawable" first-id="0x7f0800e5">
+        <public name="conversation_background" />
+        <public name="conversation_list_background" />
+    </public-group>
+
+    <public type="color" name="message_bubble_color_outgoing" id="0x7f060092" />
+
+    <public-group type="color" first-id="0x7f0600e5">
+        <public name="conversation_background_color" />
+        <public name="conversation_list_background_color" />
+    </public-group>
+</resources>

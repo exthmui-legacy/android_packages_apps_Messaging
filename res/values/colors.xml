@@ -61,7 +61,8 @@
     <color name="message_text_color_incoming_selected">#ffffffff</color>
     <color name="message_text_color_incoming_download_failed">#6a6a6a</color>
     <color name="message_text_color_outgoing">#ff363636</color>
-    <color name="conversation_background">#ffffffff</color>
+    <color name="conversation_background_color">#ffffffff</color>
+    <color name="conversation_list_background_color">#ffffffff</color>
     <color name="conversation_edge_effect">#9d9d9d</color>
     <color name="compose_message_send_color">@color/lineage_accent</color>
     <color name="compose_message_send_color_pressed">#999999</color>

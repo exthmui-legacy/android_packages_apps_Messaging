@@ -16,7 +16,7 @@
 -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
     <stroke
-        android:color="@color/conversation_background"
+        android:color="@color/conversation_background_color"
         android:width="1dp" />
     <corners android:radius="3dp" />
 </shape>

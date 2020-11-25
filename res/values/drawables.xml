@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <item type="drawable" name="conversation_background">@color/conversation_background_color</item>
+    <item type="drawable" name="conversation_list_background">@color/conversation_list_background_color</item>
+</resources>
