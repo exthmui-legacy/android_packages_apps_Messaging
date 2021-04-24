@@ -62,6 +62,26 @@
         android:defaultValue="false"
         android:persistent="true" />
 
+    <SwitchPreference
+        android:key="@string/captcha_detector_key"
+        android:title="@string/captcha_enable_title"
+        android:summary="@string/captcha_enable_summary"
+        android:defaultValue="@bool/captcha_detector_default"
+        android:persistent="true" />
+
+    <PreferenceScreen
+        android:key="key_captcha_keywords_screen"
+        android:dependency="@string/captcha_detector_key"
+        android:title="@string/captcha_keywords_title">
+        <com.android.messaging.ui.appsettings.CaptchaKeywordsPreference
+            android:key="@string/captcha_keywords_key"
+            android:defaultValue="@string/captcha_keywords_default" />
+        <Preference
+            android:key="key_captcha_keywords_screen_fotter"
+            android:summary="@string/captcha_keywords_footer"
+            android:enabled="false" />
+    </PreferenceScreen>
+
     <PreferenceScreen
             android:key="@string/advanced_pref_key"
             android:title="@string/advanced_settings" />
