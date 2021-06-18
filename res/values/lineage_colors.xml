@@ -20,5 +20,4 @@
     <color name="button_text">#000000</color>
 
     <color name="navigation_bar_bg">@android:color/white</color>
-    <color name="navigation_bar_divider">#1f000000</color>
 </resources>
