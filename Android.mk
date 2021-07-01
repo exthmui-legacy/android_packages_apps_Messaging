@@ -23,6 +23,7 @@ LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
 LOCAL_USE_AAPT2 := true
 
 LOCAL_STATIC_ANDROID_LIBRARIES := \
+    androidx-constraintlayout_constraintlayout \
     androidx.core_core \
     androidx.media_media \
     androidx.legacy_legacy-support-core-utils \
@@ -30,8 +31,10 @@ LOCAL_STATIC_ANDROID_LIBRARIES := \
     androidx.fragment_fragment \
     androidx.appcompat_appcompat \
     androidx.palette_palette \
+    androidx.preference_preference \
     androidx.recyclerview_recyclerview \
     androidx.legacy_legacy-support-v13 \
+    com.google.android.material_material \
     colorpicker \
     libchips \
     libphotoviewer
@@ -42,8 +45,7 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
     android-common-framesequence \
     com.android.vcard \
     guava \
-    libphonenumber
-
+    libphonenumber 
 include $(LOCAL_PATH)/version.mk
 
 LOCAL_AAPT_FLAGS += --version-name "$(version_name_package)"
@@ -61,7 +63,7 @@ LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 ifeq (eng,$(TARGET_BUILD_VARIANT))
     LOCAL_PROGUARD_FLAG_FILES += proguard-test.flags
 else
-    LOCAL_PROGUARD_FLAG_FILES += proguard-release.flags
+    LOCAL_PROGUARD_FLAG_FILES += proguard-test.flags
 endif
 
 LOCAL_PACKAGE_NAME := messaging
