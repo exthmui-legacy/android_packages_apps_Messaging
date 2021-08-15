@@ -49,6 +49,8 @@ public final class NotificationsUtil {
 
         NotificationChannel newChannel = new NotificationChannel(id, title, priority);
         newChannel.enableLights(true);
+        newChannel.setShowBadge(false);
+        newChannel.enableVibration(true);
         if (groupId != null) {
             newChannel.setGroup(groupId);
         }
