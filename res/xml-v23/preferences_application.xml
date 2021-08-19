@@ -49,12 +49,6 @@
         android:persistent="true" />
 
     <SwitchPreference
-        android:key="@string/show_quick_reply_templates_pref_key"
-        android:title="@string/show_quick_reply_templates_title"
-        android:summary="@string/show_quick_reply_templates_summary"
-        android:defaultValue="@bool/show_quick_reply_templates_pref_default" />
-
-    <SwitchPreference
         android:key="pref_show_emoticons"
         android:title="@string/show_emoticons_pref_title"
         android:persistent="true"
