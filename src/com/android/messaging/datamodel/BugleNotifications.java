@@ -876,15 +876,23 @@ public class BugleNotifications {
         final NotificationCompat.Action.Builder actionBuilder =
                 new NotificationCompat.Action.Builder(R.drawable.ic_wear_reply,
                         context.getString(replyLabelRes), replyPendingIntent);
-
-        final RemoteInput remoteInput = new RemoteInput.Builder(Intent.EXTRA_TEXT).setLabel(
-                context.getString(R.string.notification_reply_prompt))
-                .build();
-        actionBuilder.addRemoteInput(remoteInput);
+        final RemoteInput.Builder remoteInputBuilder = new RemoteInput.Builder(Intent.EXTRA_TEXT);
+        remoteInputBuilder.setLabel(context.getString(R.string.notification_reply_prompt));
+        actionBuilder.addRemoteInput(remoteInputBuilder.build());
         notifBuilder.addAction(actionBuilder.build());
 
-        // Support the action on a wearable device as well
-        wearableExtender.addAction(actionBuilder.build());
+        // Support the action on a wearable device
+        final NotificationCompat.Action.Builder wearActionBuilder =
+                new NotificationCompat.Action.Builder(R.drawable.ic_wear_reply,
+                        context.getString(replyLabelRes), replyPendingIntent);
+        // use generated replies instead of fixed strings
+        /*
+        final String[] choices = context.getResources().getStringArray(
+                R.array.notification_reply_choices);
+        remoteInputBuilder.setChoices(choices);
+        */
+        wearActionBuilder.addRemoteInput(remoteInputBuilder.build());
+        wearableExtender.addAction(wearActionBuilder.build());
     }
 
     private static void addReadAction(final NotificationCompat.Builder notifBuilder,
