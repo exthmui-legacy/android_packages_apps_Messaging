@@ -21,4 +21,7 @@
     <string name="captcha_keywords_title">验证码短信关键词</string>
     <string name="captcha_keywords_footer">如果关键词列表为空，将会重置为默认的关键词列表</string>
     <string name="add_captcha_keyword">添加关键词</string>
+    <string name="show_quick_reply_templates_title">快速回复模板</string>
+    <string name="show_quick_reply_templates_summary">在短信通知中显示快速回复模板。</string>
+    <string name="notification_mark_as_read">标记为已读</string>
 </resources>

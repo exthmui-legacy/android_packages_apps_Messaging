@@ -14,4 +14,6 @@
 <resources>
     <string name="captcha_copy_action">複製 %s</string>
     <string name="captcha_has_copied_toast">驗證碼已經複製到剪貼板，長按輸入框進行粘貼。</string>
+    <string name="show_quick_reply_templates_title">快速回復模板</string>
+    <string name="show_quick_reply_templates_summary">在短訊通知中顯示快速回復模板</string>
 </resources>

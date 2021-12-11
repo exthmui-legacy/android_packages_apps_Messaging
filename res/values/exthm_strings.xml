@@ -24,4 +24,11 @@
     <string name="captcha_keywords_title">Captcha keywords</string>
     <string name="captcha_keywords_footer">If the keyword list is empty, it will be reset to the default keyword list</string>
     <string name="add_captcha_keyword">Add keyword</string>
+
+    <!-- Quick Reply -->
+    <string name="show_quick_reply_templates_title">Quick reply templates</string>
+    <string name="show_quick_reply_templates_summary">Show quick reply templates in notification.</string>
+
+    <!-- Mark message as read -->
+    <string name="notification_mark_as_read">Mark as read</string>
 </resources>

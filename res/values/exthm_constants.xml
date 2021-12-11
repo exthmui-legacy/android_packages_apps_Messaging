@@ -17,4 +17,7 @@
 
     <string name="captcha_keywords_key" translatable="false">captcha_keywords</string>
     <string name="captcha_keywords_default" translatable="false">验证码\n校验码\n口令\nPIN\nコード\ncode</string>
+
+    <string name="show_quick_reply_templates_pref_key" translatable="false">show_quick_reply_templates</string>
+    <bool name="show_quick_reply_templates_pref_default" translatable="false">true</bool>
 </resources>

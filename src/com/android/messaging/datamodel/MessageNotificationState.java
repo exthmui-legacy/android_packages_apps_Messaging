@@ -341,6 +341,14 @@ public abstract class MessageNotificationState extends NotificationState {
     }
 
     @Override
+    public PendingIntent getReadIntent() {
+        return UIIntents.get().getPendingIntentForMarkingAsRead(
+                    Factory.get().getApplicationContext(),
+                    mConversationIds,
+                    getReadIntentRequestCode());
+    }
+
+    @Override
     public PendingIntent getClearIntent() {
         return UIIntents.get().getPendingIntentForClearingNotifications(
                     Factory.get().getApplicationContext(),

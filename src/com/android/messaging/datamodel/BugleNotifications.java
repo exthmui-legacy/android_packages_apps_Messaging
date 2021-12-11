@@ -921,11 +921,12 @@ public class BugleNotifications {
                         context.getString(replyLabelRes), replyPendingIntent);
         final String[] choices = context.getResources().getStringArray(
                 R.array.notification_reply_choices);
-        final RemoteInput remoteInput = new RemoteInput.Builder(Intent.EXTRA_TEXT).setLabel(
+        if (showQuickReplyTemplates()) {
+            final RemoteInput remoteInput = new RemoteInput.Builder(Intent.EXTRA_TEXT).setLabel(
                 context.getString(R.string.notification_reply_prompt)).
                 setChoices(choices)
                 .build();
-        actionBuilder.addRemoteInput(remoteInput);
+        actionBuilder.addRemoteInput(remoteInput);}
         wearableExtender.addAction(actionBuilder.build());
     }
 
@@ -1261,5 +1262,15 @@ public class BugleNotifications {
                 PendingIntentConstants.MSG_SEND_ERROR,
                 builder.build());
     }
+
+    public static boolean showQuickReplyTemplates() {
+        final Context context = Factory.get().getApplicationContext();
+        final Resources resources = context.getResources();
+        final BuglePrefs prefs = BuglePrefs.getApplicationPrefs();
+        final String showQuickReplyTemplatesKey = resources.getString(R.string.show_quick_reply_templates_pref_key);
+        final boolean defaultValue = resources.getBoolean(R.bool.show_quick_reply_templates_pref_default);
+        return prefs.getBoolean(showQuickReplyTemplatesKey, defaultValue);
+    }
+
 }
 
