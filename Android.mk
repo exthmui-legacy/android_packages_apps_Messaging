@@ -23,6 +23,7 @@ LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
 LOCAL_USE_AAPT2 := true
 
 LOCAL_STATIC_ANDROID_LIBRARIES := \
+    androidx-constraintlayout_constraintlayout \
     androidx.appcompat_appcompat \
     androidx.collection_collection \
     androidx.core_core \
@@ -31,9 +32,11 @@ LOCAL_STATIC_ANDROID_LIBRARIES := \
     androidx.legacy_legacy-support-core-utils \
     androidx.legacy_legacy-support-core-ui \
     androidx.palette_palette \
+    androidx.preference_preference \
     androidx.recyclerview_recyclerview \
     androidx.viewpager_viewpager \
     androidx.legacy_legacy-support-v13 \
+    com.google.android.material_material \
     colorpicker \
     libchips \
     libphotoviewer
