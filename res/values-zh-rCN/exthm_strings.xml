@@ -19,9 +19,14 @@
     <string name="captcha_enable_title">验证码识别</string>
     <string name="captcha_enable_summary">识别短信中的验证码，并且在通知中提供复制操作</string>
     <string name="captcha_keywords_title">验证码短信关键词</string>
-    <string name="captcha_keywords_footer">如果关键词列表为空，将会重置为默认的关键词列表</string>
+    <string name="captcha_keywords_header">长按关键词可以进行删除操作。如果关键词列表为空，将会重置为默认的关键词列表</string>
+    <string name="captcha_dialog_tip">你可以使用换行符来分割关键词</string>
     <string name="add_captcha_keyword">添加关键词</string>
+    <string name="captcha_keyword_add_successsful_tip">添加关键词成功</string>
+    <string name="captcha_keyword_add_empty">你输入的内容为空</string>
+    <string name="captcha_keyword_duplicate">你输入的关键词中存在重复</string>
     <string name="show_quick_reply_templates_title">快速回复模板</string>
     <string name="show_quick_reply_templates_summary">在短信通知中显示快速回复模板。</string>
     <string name="notification_mark_as_read">标记为已读</string>
+    <string name="error">错误</string>
 </resources>
