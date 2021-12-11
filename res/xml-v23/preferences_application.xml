@@ -62,12 +62,6 @@
         android:dependency="@string/notifications_enabled_pref_key" />
 
     <SwitchPreference
-        android:key="@string/show_quick_reply_templates_pref_key"
-        android:title="@string/show_quick_reply_templates_title"
-        android:summary="@string/show_quick_reply_templates_summary"
-        android:defaultValue="@bool/show_quick_reply_templates_pref_default" />
-
-    <SwitchPreference
         android:key="@string/notification_vibration_pref_key"
         android:title="@string/notification_vibrate_pref_title"
         android:defaultValue="@bool/notification_vibration_pref_default"

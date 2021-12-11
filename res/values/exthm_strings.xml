@@ -27,11 +27,7 @@
     <string name="captcha_keyword_add_successsful_tip">Add keyword(s) successfully</string>
     <string name="captcha_keyword_add_empty">The content you input is empty</string>
     <string name="captcha_keyword_duplicate">The keyword(s) you input is(are) exists</string>
-
-    <!-- Quick Reply -->
-    <string name="show_quick_reply_templates_title">Quick reply templates</string>
-    <string name="show_quick_reply_templates_summary">Show quick reply templates in notification.</string>
-
+    
     <!-- Mark message as read -->
     <string name="notification_mark_as_read">Mark as read</string>
 

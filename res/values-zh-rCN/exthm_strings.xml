@@ -25,8 +25,6 @@
     <string name="captcha_keyword_add_successsful_tip">添加关键词成功</string>
     <string name="captcha_keyword_add_empty">你输入的内容为空</string>
     <string name="captcha_keyword_duplicate">你输入的关键词中存在重复</string>
-    <string name="show_quick_reply_templates_title">快速回复模板</string>
-    <string name="show_quick_reply_templates_summary">在短信通知中显示快速回复模板。</string>
     <string name="notification_mark_as_read">标记为已读</string>
     <string name="error">错误</string>
 </resources>

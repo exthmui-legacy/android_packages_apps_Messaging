@@ -68,12 +68,6 @@
         android:dependency="@string/notifications_enabled_pref_key" />
 
     <SwitchPreference
-        android:key="@string/show_quick_reply_templates_pref_key"
-        android:title="@string/show_quick_reply_templates_title"
-        android:summary="@string/show_quick_reply_templates_summary"
-        android:defaultValue="@bool/show_quick_reply_templates_pref_default" />
-
-    <SwitchPreference
         android:key="@string/captcha_detector_key"
         android:title="@string/captcha_enable_title"
         android:summary="@string/captcha_enable_summary"
